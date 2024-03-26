@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="homework-styled-components" />
+    <orderEntry type="module" module-name="1-lesson-proj" />
   </component>
 </module>
