@@ -7,6 +7,7 @@ import {Projects} from './layout/sectoins/projects/Projects';
 import React from 'react';
 import {AboutMe} from './layout/sectoins/aboutMe/AboutMe';
 import {Contacts} from './layout/sectoins/contacts/Contacts';
+import {Footer} from './layout/sectoins/footer/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Projects/>
             <AboutMe/>
             <Contacts/>
+            <Footer/>
         </div>
     );
 }
