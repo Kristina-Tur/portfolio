@@ -5,6 +5,8 @@ import {Main} from './layout/sectoins/main/Main';
 import {Skills} from './layout/sectoins/skills/Skills';
 import {Projects} from './layout/sectoins/projects/Projects';
 import React from 'react';
+import {AboutMe} from './layout/sectoins/aboutMe/AboutMe';
+import {Contacts} from './layout/sectoins/contacts/Contacts';
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
             <Main/>
             <Skills/>
             <Projects/>
+            <AboutMe/>
+            <Contacts/>
         </div>
     );
 }
