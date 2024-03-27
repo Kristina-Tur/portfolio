@@ -4,7 +4,7 @@ import {SectionTitle} from '../../../component/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
 import {Button} from '../../../component/Button';
 import {Contact} from './Contact';
-import social from './../../../assets/images/sociAL.svg'
+import {Icon} from '../../../component/icon/icon';
 
 export const Contacts = () => {
     return (
@@ -25,13 +25,32 @@ export const Contacts = () => {
                     <Contact title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
                 </StyledMyContact>
             </FlexWrapper>
-            <Social src={social}/>
+            <Social>
+                <SocialList>
+                    <SocialItem>
+                        <SocialLink>
+                            <Icon iconId={'js'}/>
+                        </SocialLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialLink>
+                            <Icon iconId={'js'}/>
+                        </SocialLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialLink>
+                            <Icon iconId={'js'}/>
+                        </SocialLink>
+                    </SocialItem>
+
+                </SocialList>
+            </Social>
         </StyledContacts>
     );
 };
 
 const StyledContacts = styled.section`
-  
+
 `
 const StyledForm = styled.form`
   display: flex;
@@ -50,7 +69,18 @@ const Field = styled.input`
 const StyledMyContact = styled.div`
 
 `
-const Social = styled.img`
+const Social = styled.div`
+
+`
+const SocialList = styled.ul`
+  display: flex;
+  justify-content: center;
+`
+const SocialItem = styled.li`
+    
+`
+const SocialLink = styled.a`
+    
 `
 
 

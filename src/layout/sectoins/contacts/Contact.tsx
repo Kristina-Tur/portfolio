@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import location from '../../../assets/images/location.svg';
+import location from '../../../assets/images/svg/location.svg';
 
 type ContactPropsType = {
     title: string
