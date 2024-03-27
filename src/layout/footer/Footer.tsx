@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Button} from '../../../component/Button';
+import {Button} from '../../component/Button';
 
 export const Footer = () => {
     return (
