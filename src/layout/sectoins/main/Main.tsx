@@ -3,22 +3,25 @@ import photo from '../../../assets/images/photo.jpg'
 import {FlexWrapper} from '../../../component/FlexWrapper';
 import styled from 'styled-components';
 import {Button} from '../../../component/Button';
+import {Container} from '../../../component/Container';
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper justifyContent={'space-around'} alignItems={'center'}>
-                <Photo src={photo} alt=""/>
-                <Box>
-                    <Text>Hello,</Text>
-                    <Title>I’m Kristina Tur</Title>
-                    <MainTitle>Front-End Developer</MainTitle>
-                    <MainText>Front-End developer based in Brest, Belarus.
-                        I’am coding with a clean and beautiful problem
-                        solving in mind.</MainText>
-                    <Button>Download CV</Button>
-                </Box>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper justifyContent={'space-around'} alignItems={'center'}>
+                    <Photo src={photo} alt=""/>
+                    <Box>
+                        <Text>Hello,</Text>
+                        <Title>I’m Kristina Tur</Title>
+                        <MainTitle>Front-End Developer</MainTitle>
+                        <MainText>Front-End developer based in Brest, Belarus.
+                            I’am coding with a clean and beautiful problem
+                            solving in mind.</MainText>
+                        <Button>Download CV</Button>
+                    </Box>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };

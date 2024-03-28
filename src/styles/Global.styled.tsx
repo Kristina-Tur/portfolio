@@ -32,11 +32,11 @@ export const GlobalStyles = createGlobalStyle`
     list-style-type: none;
   }
   
-  section :nth-child(odd){
+  section:nth-of-type(odd){
     background-color: ${Theme.colors.primaryBg};
   }
   
-  section :nth-child(even){
+  section:nth-of-type(even){
     background-color: ${Theme.colors.secondaryBg};
   }
 `
