@@ -29,7 +29,7 @@ export const Contacts = () => {
                 <SocialList>
                     <SocialItem>
                         <SocialLink>
-                            <Icon iconId={'js'}/>
+                            <Icon iconId={'instagram'}/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
