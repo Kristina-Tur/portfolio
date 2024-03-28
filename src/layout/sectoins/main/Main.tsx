@@ -6,20 +6,41 @@ import {Button} from '../../../component/Button';
 
 export const Main = () => {
     return (
-        <FlexWrapper justifyContent={'space-around'} alignItems={'center'}>
-            <Photo src={photo} alt=""/>
-            <div>
-                <span>Hello,</span>
-                <h2>I’m Kristina Tur</h2>
-                <h1>Front-End Developer</h1>
-                <p>Front-End developer based in Brest, Belarus.
-                    I’am coding with a clean and beautiful problem
-                    solving in mind.</p>
-                <Button>Download CV</Button>
-            </div>
-        </FlexWrapper>
+        <StyledMain>
+            <FlexWrapper justifyContent={'space-around'} alignItems={'center'}>
+                <Photo src={photo} alt=""/>
+                <Box>
+                    <Text>Hello,</Text>
+                    <Title>I’m Kristina Tur</Title>
+                    <MainTitle>Front-End Developer</MainTitle>
+                    <MainText>Front-End developer based in Brest, Belarus.
+                        I’am coding with a clean and beautiful problem
+                        solving in mind.</MainText>
+                    <Button>Download CV</Button>
+                </Box>
+            </FlexWrapper>
+        </StyledMain>
     );
 };
+
+const StyledMain = styled.section`
+
+`
+const Box = styled.div`
+
+`
+const Text = styled.span`
+
+`
+const Title = styled.h2`
+
+`
+const MainTitle = styled.h1`
+
+`
+const MainText = styled.p`
+
+`
 
 const Photo = styled.img`
 
