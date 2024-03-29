@@ -14,7 +14,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justifyContent={'space-between'} alignItems={'center'} minHeight={'96px'}>
+                <FlexWrapper justifyContent={'space-between'} alignItems={'center'} >
                     <Logo/>
                     <MenuHeader menuItems={headerItems}/>
                 </FlexWrapper>
@@ -25,6 +25,8 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${Theme.colors.primaryBg};
+  min-height: 96px;
+  display: flex;
   position: fixed;
   top: 0;
   right: 0;
