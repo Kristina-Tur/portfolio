@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Theme} from '../styles/Theme';
 
 
 export const Button = styled.button`
-
+  color: ${Theme.colors.text.primary};
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 83px;
+  background-image: ${Theme.colors.accent};
+  padding: 16px 66px;
 `

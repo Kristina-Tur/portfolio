@@ -13,7 +13,9 @@ export const AboutMe = () => {
             <List>
                 <li>28 years old</li>
                 <li>Higher technological education in the field of garment production </li>
-                <li>Started to get interested in programming in 2022</li>
+                <li>Started to get interested in programming in 2023</li>
+                <li>I’am coding with a clean and beautiful problem
+                    solving in mind.</li>
                 <li>languages:English, Russian</li>
                 <li>I live in Brest, Belarus</li>
             </List>

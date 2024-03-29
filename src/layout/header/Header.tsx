@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Menu} from '../../component/menu/Menu';
 import {Logo} from '../../component/logo/Logo';
 import {Projects} from '../sectoins/projects/Projects';
 import {Container} from '../../component/Container';
