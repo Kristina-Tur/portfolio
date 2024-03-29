@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   height: 100%;
   max-width: 1140px;
   max-height: 500px;
-  margin-top: 140px;
+  margin-top: 100px;
 
   border: 1px solid rgba(26, 27, 26, .31);
   border-top-left-radius: 200px;
@@ -68,21 +68,21 @@ const Title = styled.h2`
   font-weight: 700;
   line-height: 136%;
   margin-bottom: 30px;
+  
   position: relative;
   
   &::before{
     content: '';
-    display: block;
-    width: 30%;
+    display: inline-block;
+    width: 120px;
     height: 3px;
-    margin: -15px 0;
-    
     background-color: #73c9ec;
     border-radius: 4px;
     
     position: absolute;
-    bottom: 0;
-    right: 35%;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
   }
 `
 const MainTitle = styled.h1`

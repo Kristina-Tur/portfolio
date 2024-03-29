@@ -5,13 +5,13 @@ import {Icon} from '../../../component/icon/icon';
 import {SectionTitle} from '../../../component/SectionTitle';
 import {Skill} from './Skill';
 import {Container} from '../../../component/Container';
+import {Theme} from '../../../styles/Theme';
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <SectionTitle>My Skills</SectionTitle>
-                <FlexWrapper flexWrap={'wrap'} justifyContent={'space-between'}>
+                <FlexWrapper flexDirection={'column'}>
                     <Skill iconId={'js'} title={'JavaScript'}/>
                     <Skill iconId={'HTML'} title={'HTML'}/>
                     <Skill iconId={'css'} title={'CSS'}/>
@@ -26,5 +26,5 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-
+  padding: 80px 0;
 `
