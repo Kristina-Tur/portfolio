@@ -6,6 +6,7 @@ import {Projects} from '../sectoins/projects/Projects';
 import {Container} from '../../component/Container';
 import {FlexWrapper} from '../../component/FlexWrapper';
 import {Theme} from '../../styles/Theme';
+import {MenuHeader} from './MenuHeader';
 
 // rsc
 const headerItems = ['Home', 'Projects', 'About', 'Contacts']
@@ -13,9 +14,9 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justifyContent={'space-between'} alignItems={'center'}>
+                <FlexWrapper justifyContent={'space-between'} alignItems={'center'} minHeight={'96px'}>
                     <Logo/>
-                    <Menu menuItems={headerItems}/>
+                    <MenuHeader menuItems={headerItems}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -24,7 +25,6 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${Theme.colors.primaryBg};
-  min-height: 96px;
   position: fixed;
   top: 0;
   right: 0;
