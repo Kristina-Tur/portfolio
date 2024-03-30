@@ -25,29 +25,30 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
 
   position: relative;
 
-&::before, 
-&::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px; /* Ширина линии крестика */
-  height: 80px; /* Длина линии крестика */
-  background-image: ${Theme.colors.accent};
-}
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px; /* Ширина линии крестика */
+    height: 80px; /* Длина линии крестика */
+    background-image: ${Theme.colors.accent};
+  }
+  
 
-&::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
+  &::after {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
 
-&::after {
-  transform: translate(-50%, -50%) rotate(-135deg);
-}
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
 `
 const Wrapper = styled.div`
   display: flex;
@@ -56,7 +57,7 @@ const Wrapper = styled.div`
   height: 100%;
   max-width: 1140px;
   max-height: 500px;
-  margin-top: 100px;
+  margin-top: 20px;
 
   border: 1px solid rgba(26, 27, 26, .31);
   border-top-left-radius: 200px;
@@ -68,7 +69,7 @@ const Wrapper = styled.div`
   
   &::before{
     content: '';
-    border-image: repeating-linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%) 1;
+    border-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%) 1;
     border: 25px solid;
     border-radius: 50%;
     width: 150px;

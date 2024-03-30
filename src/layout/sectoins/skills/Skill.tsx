@@ -6,6 +6,9 @@ import {Theme} from '../../../styles/Theme';
 type SkillPropsType = {
     iconId: string
     title: string
+    width?: string
+    height?: string
+    viewBox?: string
 }
 
 export const Skill = (props: SkillPropsType) => {

@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   section{
-    padding: 70px 0 100px;
+    padding: 100px 0;
   }
   
   section:nth-of-type(odd){
