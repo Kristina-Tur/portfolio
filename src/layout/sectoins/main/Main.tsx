@@ -38,10 +38,10 @@ const StyledMain = styled.section`
   &::before {
     content: '';
     position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 10px;
-    height: 80px;
+    top: 22%;
+    left: 18%;
+    width: 12px;
+    height: 75px;
     background-image: ${Theme.colors.accent};
   }
 
@@ -87,7 +87,7 @@ const Element = styled.div`
   z-index: 0;*/
   position: absolute;
   bottom: 11%;
-  right: 3%;
+  right: 13%;
 `
 
 const Photo = styled.div`
