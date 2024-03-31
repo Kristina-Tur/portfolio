@@ -12,7 +12,7 @@ export const Main = () => {
         <StyledMain>
             <Container>
               <Element>
-                <img src={rec}/>
+                <img src={rec} alt={''}/>
               </Element>
                 <Wrapper>
                     <Photo></Photo>
@@ -32,11 +32,46 @@ const StyledMain = styled.section`
   min-height: 80vh;
   display: flex;
 
-  /*position: relative;*/
-
+  position: relative;
   
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 10px;
+    height: 80px;
+    background-image: ${Theme.colors.accent};
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 `
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  max-width: 1140px;
+  max-height: 500px;
+  margin-top: 20px;
+  
+  background: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 27, 26, .31);
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  box-shadow: 0 10px 30px #000;
+ 
+  position: relative;
+`
 const Element = styled.div`
   /*width: 150px;
   height: 150px;
@@ -51,49 +86,8 @@ const Element = styled.div`
   right: 50px;
   z-index: 0;*/
   position: absolute;
-  right: 0;
-  bottom: 0;
-
-`
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  max-width: 1140px;
-  max-height: 500px;
-  margin-top: 20px;
-
-  background-color: ${Theme.colors.primaryBg};
-  border: 1px solid rgba(26, 27, 26, .31);
-  border-top-left-radius: 200px;
-  border-bottom-right-radius: 200px;
-  box-shadow: 0 10px 30px #000;
- 
-  position: relative;
-  z-index: 1;
-
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 2%;
-    left: 40%;
-    width: 10px;
-    height: 80px;
-    background-image: ${Theme.colors.accent};
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(-135deg);
-  }
-
-  &::before {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-  
+  bottom: 11%;
+  right: 3%;
 `
 
 const Photo = styled.div`
@@ -111,11 +105,13 @@ const Photo = styled.div`
 const Box = styled.div`
 
 `
+
 const Text = styled.span`
   color: ${Theme.colors.text.primary};
   font-size: 18px;
   line-height: 1.6;
 `
+
 const Title = styled.h2`
   color: ${Theme.colors.text.primary};
   font-size: 60px;
@@ -139,6 +135,7 @@ const Title = styled.h2`
     transform: translateX(-50%);
   }
 `
+
 const MainTitle = styled.h1`
   color: #73c9ec;
   font-size: 30px;
