@@ -9,5 +9,5 @@ export const Button = styled.button`
   font-weight: 600;
   border-radius: 83px;
   background-image: ${Theme.colors.accent};
-  padding: 16px 66px;
+  padding: 15px 65px;
 `

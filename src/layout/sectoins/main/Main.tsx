@@ -5,11 +5,15 @@ import styled from 'styled-components';
 import {Button} from '../../../component/Button';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
+import rec from './../../../assets/images/svg/Ellipse.svg'
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
+              <Element>
+                <img src={rec}/>
+              </Element>
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
@@ -28,28 +32,30 @@ const StyledMain = styled.section`
   min-height: 80vh;
   display: flex;
 
-  position: relative;
+  /*position: relative;*/
 
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px; /* Ширина линии крестика */
-    height: 80px; /* Длина линии крестика */
-    background-image: ${Theme.colors.accent};
-  }
   
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(-135deg);
-  }
-
-  &::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
 `
+
+const Element = styled.div`
+  /*width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 25px solid transparent;
+  background-image: linear-gradient(270deg, #13ADC7, #945DD6), radial-gradient(circle at center, transparent 50%, white 50%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  z-index: 0;*/
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+`
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
@@ -59,27 +65,35 @@ const Wrapper = styled.div`
   max-height: 500px;
   margin-top: 20px;
 
+  background-color: ${Theme.colors.primaryBg};
   border: 1px solid rgba(26, 27, 26, .31);
   border-top-left-radius: 200px;
   border-bottom-right-radius: 200px;
   box-shadow: 0 10px 30px #000;
-  
+ 
   position: relative;
-  z-index: 0;
-  
-  &::before{
+  z-index: 1;
+
+  &::after,
+  &::before {
     content: '';
-    border-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%) 1;
-    border: 25px solid;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+    z-index: 2;
+    top: 2%;
+    left: 40%;
+    width: 10px;
+    height: 80px;
+    background-image: ${Theme.colors.accent};
   }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
 `
 
 const Photo = styled.div`
@@ -91,6 +105,7 @@ const Photo = styled.div`
   height: 400px;
   border-radius: 50%;
   border: 25px solid ${Theme.colors.secondaryBg};
+  position: relative;
 `
 
 const Box = styled.div`
