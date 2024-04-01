@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {SectionTitle} from '../../../component/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
-import {Menu} from '../../../component/menu/Menu';
+import {TabMenu} from './tabMenu/TabMenu';
 import {Project} from './project/Project';
 import project1 from './../../../assets/images/project.png'
 import {Container} from '../../../component/Container';
@@ -13,7 +13,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <Menu menuItems={projectsItems}/>
+                <TabMenu menuItems={projectsItems}/>
                 <FlexWrapper flexWrap={'wrap'} justifyContent={'space-evenly'}>
                     <Project src={project1} title={'Project 1'}
                              text={'Application that can help you in learning by flashcards'}/>
