@@ -1,19 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Button} from '../../component/Button';
+import {Theme} from '../../styles/Theme';
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <Copyright>© 2024 All Rights Reserved.</Copyright>
-            <Button>^стрелка вверх</Button>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-
+background-color: ${Theme.colors.primaryBg};
 `
-const Copyright = styled.small`
-
+const Copyright = styled.p`
+  color: ${Theme.colors.text.primary};
+  font-size: 12px;
+  font-weight: 400;
+  border-top: 1px solid ${Theme.colors.neutral};
+  padding: 20px 0;
+  text-align: center;
 `
