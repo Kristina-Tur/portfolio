@@ -23,7 +23,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${Theme.colors.primaryBg};
-  min-height: 96px;
+  min-height: 60px;
   display: flex;
   position: fixed;
   top: 0;

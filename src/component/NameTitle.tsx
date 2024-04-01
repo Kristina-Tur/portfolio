@@ -1,20 +1,18 @@
 import styled from 'styled-components';
 import {Theme} from '../styles/Theme';
 
-type SectionTitlePropsType = {
-    color?:string
+type NameTitlePropsType = {
+    color?: string
 }
-
-export const SectionTitle = styled.h2<SectionTitlePropsType>`
-  color: ${props => props.color || Theme.colors.text.primary} ;
-  font-size: 32px;
-  font-weight: 600;
+export const NameTitle = styled.h2<NameTitlePropsType>`
+  color: ${props => props.color || Theme.colors.text.primary};
+  font-size: 60px;
+  font-weight: 700;
   line-height: 136%;
-  text-align: center;
-  margin-bottom: 70px;
-
-  position: relative;
-
+  margin-bottom: 30px;
+  
+  /*position: relative;
+  
   &::before{
     content: '';
     display: inline-block;
@@ -22,10 +20,10 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     height: 3px;
     background-color: #73c9ec;
     border-radius: 4px;
-
+    
     position: absolute;
     left: 50%;
     bottom: -10px;
     transform: translateX(-50%);
-  }
+  }*/
 `

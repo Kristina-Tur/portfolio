@@ -6,6 +6,7 @@ import {Button} from '../../../component/Button';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
 import rec from './../../../assets/images/svg/Ellipse.svg'
+import {NameTitle} from '../../../component/NameTitle';
 
 export const Main = () => {
     return (
@@ -18,7 +19,7 @@ export const Main = () => {
                     <Photo></Photo>
                     <Box>
                         <Text>Hello,</Text>
-                        <Title>I’m Kristina Tur</Title>
+                        <NameTitle>I’m Kristina Tur</NameTitle>
                         <MainTitle>Front-End Developer</MainTitle>
                         <Button>Download CV</Button>
                     </Box>
@@ -110,30 +111,6 @@ const Text = styled.span`
   color: ${Theme.colors.text.primary};
   font-size: 18px;
   line-height: 1.6;
-`
-
-const Title = styled.h2`
-  color: ${Theme.colors.text.primary};
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 136%;
-  margin-bottom: 30px;
-  
-  position: relative;
-  
-  &::before{
-    content: '';
-    display: inline-block;
-    width: 120px;
-    height: 3px;
-    background-color: #73c9ec;
-    border-radius: 4px;
-    
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-  }
 `
 
 const MainTitle = styled.h1`

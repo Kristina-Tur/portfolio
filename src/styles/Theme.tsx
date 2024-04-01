@@ -6,7 +6,7 @@ export const Theme = {
         neutral: '#E0E0E1',
         text: {
             primary: '#FBFBFC',
-            secondary: '#111111',
+            secondary: '#393939',
             neutral: '#959596'
         }
     }
