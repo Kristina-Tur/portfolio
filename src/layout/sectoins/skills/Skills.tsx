@@ -15,7 +15,7 @@ export const Skills = () => {
                 <Box>
                     <Skill iconId={'HTML'} title={'HTML'}/>
                     <Skill iconId={'css'} title={'CSS'}/>
-                    <Skill iconId={'js'} title={'JavaScript'} width="121" height="120" viewBox="0 0 121 120"/>
+                    <Skill iconId={'js'} title={'JavaScript'}/>
                     <Skill iconId={'ts'} title={'TypeScript'}/>
                     <Skill iconId={'react'} title={'React'}/>
                     <Skill iconId={'git'} title={'GitHub'}/>
@@ -37,5 +37,5 @@ const Box = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 50px;
+  gap: 150px;
 `
