@@ -34,5 +34,9 @@ const Link = styled.a`
   border: 2px solid ${Theme.colors.neutral};
   padding: 5px 40px;
   
+  &:hover{
+    background-color: ${Theme.colors.neutral};
+    color: ${Theme.colors.text.secondary};
+  }
 `
 
