@@ -16,7 +16,7 @@ export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
             <IconWrapper>
-            <Icon iconId={props.iconId}/>
+                <Icon iconId={props.iconId} viewBox={props.viewBox} />
             </IconWrapper>
             <SkillWrapper>
                 <SkillTitle>{props.title}</SkillTitle>
@@ -35,7 +35,7 @@ const IconWrapper = styled.div`
   height: 100%; /* Задаем высоту изображения */
 `
 const SkillWrapper = styled.div`
-position: relative;
+  position: relative;
 
   &::before {
     content: '';
@@ -43,10 +43,10 @@ position: relative;
     width: 160px;
     height: 90px;
     border-radius: 24px;
-    /*background-color: ${Theme.colors.neutral};*/
+      /*background-color: ${Theme.colors.neutral};*/
     box-shadow: 0 3px 10px ${Theme.colors.text.secondary};
     transform: translate(-50%, -50%);
-    
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -60,8 +60,13 @@ const SkillTitle = styled.p`
   font-weight: 600;
   line-height: 136%;
 
-  
+
 `
+
+
+
+
+
 
 /*
 const StyledSkill = styled.div`

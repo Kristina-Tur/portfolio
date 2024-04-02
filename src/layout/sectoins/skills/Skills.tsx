@@ -17,7 +17,7 @@ export const Skills = () => {
                     <Skill iconId={'css'} title={'CSS'}/>
                     <Skill iconId={'js'} title={'JavaScript'}/>
                     <Skill iconId={'ts'} title={'TypeScript'}/>
-                    <Skill iconId={'react'} title={'React'}/>
+                    <Skill iconId={'react'} title={'React'} viewBox={'0 -6 112 112'}/>
                     <Skill iconId={'git'} title={'GitHub'}/>
                     <Skill iconId={'figma'} title={'Figma'}/>
                     <Skill iconId={'figma'} title={'Figma'}/>

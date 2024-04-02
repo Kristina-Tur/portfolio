@@ -29,9 +29,12 @@ const Svg = styled.svg`
 
   position: absolute;
   transform: translate(95%, -82%);*/
-  width: 100%; /* Задаем ширину изображения */
-  height: 100%; /* Задаем высоту изображения */
-  object-fit: contain;
+  /*width: 100%; !* Задаем ширину изображения *!
+  height: 100%; !* Задаем высоту изображения *!
+  object-fit: contain;*/
+  &::placeholder{
+    flex-direction: column-reverse;
+  }
 `
 
 
