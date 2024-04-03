@@ -12,9 +12,10 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-              <Element>
+              {/*<Element>
                 <img src={rec} alt={''}/>
-              </Element>
+              </Element>*/}
+
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
@@ -24,6 +25,7 @@ export const Main = () => {
                         <Button>Download CV</Button>
                     </Box>
                 </Wrapper>
+                <Element1></Element1>
             </Container>
         </StyledMain>
     );
@@ -35,7 +37,7 @@ const StyledMain = styled.section`
 
   position: relative;
   
-  &::after,
+  /*&::after,
   &::before {
     content: '';
     position: absolute;
@@ -52,7 +54,7 @@ const StyledMain = styled.section`
 
   &::before {
     transform: translate(-50%, -50%) rotate(-45deg);
-  }
+  }*/
 `
 
 const Wrapper = styled.div`
@@ -71,7 +73,7 @@ const Wrapper = styled.div`
   border-bottom-right-radius: 200px;
   box-shadow: 0 10px 30px #000;
  
-  position: relative;
+  /*position: relative;*/
 `
 const Element = styled.div`
   /*width: 150px;
@@ -89,6 +91,29 @@ const Element = styled.div`
   position: absolute;
   bottom: 11%;
   right: 13%;
+`
+
+const Element1 = styled.div`
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+  border-radius: 50%;
+  background-color: #131880;
+  text-align: center;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    bottom: -25px;
+    left: -25px;
+    right: -25px;
+    background-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+    border-radius: 50%;
+    /*z-index: -1;*/
+  }
 `
 
 const Photo = styled.div`
