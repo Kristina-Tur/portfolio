@@ -25,7 +25,7 @@ export const Main = () => {
                         <Button>Download CV</Button>
                     </Box>
                 </Wrapper>
-                <Element1></Element1>
+                <Element></Element>
             </Container>
         </StyledMain>
     );
@@ -33,10 +33,14 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 0;
 
-  /*position: relative;*/
+  /*position: relative;
 
-    /*&::after,
+    &::after,
   &::before {
     content: '';
     position: absolute;
@@ -69,10 +73,13 @@ const Wrapper = styled.div`
   border-top-left-radius: 200px;
   border-bottom-right-radius: 200px;
   box-shadow: 0 10px 30px #000;
+  
+  position: relative;
+  z-index: 1;
 
   /*position: relative;*/
 `
-const Element = styled.div`
+const Element1 = styled.div`
   /*width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -90,12 +97,15 @@ const Element = styled.div`
   right: 13%;
 `
 
-const Element1 = styled.div`
+const Element = styled.div`
   position: relative;
+  left: 940px;
+  bottom: 155px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #131880;
+  background-color: ${Theme.colors.primaryBg};
+  margin-bottom: -150px;
 
   &::before {
     content: "";
@@ -118,11 +128,11 @@ const Photo = styled.div`
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  border: 25px solid ${Theme.colors.secondaryBg};
+  border: 25px solid ${Theme.colors.secondary};
 `
 
 const Box = styled.div`
-
+  height: 400px;
 `
 
 const Text = styled.span`
@@ -132,7 +142,7 @@ const Text = styled.span`
 `
 
 const MainTitle = styled.h1`
-  color: #13ADC7;
+  color: ${Theme.colors.text.accent};
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 1px;

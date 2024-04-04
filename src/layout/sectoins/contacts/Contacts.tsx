@@ -57,7 +57,7 @@ const StyledContacts = styled.section`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: ${Theme.colors.secondaryBg};
+  background-color: ${Theme.colors.secondary};
   border-radius: 80px;
   max-width: 940px;
   width: 100%;

@@ -42,6 +42,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   section:nth-of-type(even){
-    background-color: ${Theme.colors.secondaryBg};
+    background-color: ${Theme.colors.secondary};
   }
 `
