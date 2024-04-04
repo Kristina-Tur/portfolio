@@ -12,9 +12,6 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                {/*<Element>
-                <img src={rec} alt={''}/>
-              </Element>*/}
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
@@ -76,25 +73,6 @@ const Wrapper = styled.div`
   
   position: relative;
   z-index: 1;
-
-  /*position: relative;*/
-`
-const Element1 = styled.div`
-  /*width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 25px solid transparent;
-  background-image: linear-gradient(270deg, #13ADC7, #945DD6), radial-gradient(circle at center, transparent 50%, white 50%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-  z-index: 0;*/
-  position: absolute;
-  bottom: 11%;
-  right: 13%;
 `
 
 const Element = styled.div`
