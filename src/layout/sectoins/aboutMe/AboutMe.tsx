@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import {SectionTitle} from '../../../component/SectionTitle';
 import backgroundImage from './../../../assets/images/map2.png'
-import {Button} from '../../../component/Button';
+import {Link} from '../../../component/Link';
 import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
 import {NameTitle} from '../../../component/NameTitle';
-import ins from './../../../assets/images/instagram-svgrepo-com.svg';
+import ins from './../../../assets/images/instagram-gray.svg';
 
 export const AboutMe = () => {
     return (
@@ -30,7 +30,7 @@ export const AboutMe = () => {
                         <ListItem>Languages: English, Russian</ListItem>
                         <ListItem>I live in Brest, Belarus</ListItem>
                     </List>
-                    <Button>Download CV</Button>
+                    <Link>Download CV</Link>
                 </Wrapper>
             </Container>
         </StyledAboutMe>

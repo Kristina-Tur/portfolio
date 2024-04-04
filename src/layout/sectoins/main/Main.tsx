@@ -2,10 +2,9 @@ import React from 'react';
 import photo from '../../../assets/images/photo2.jpg'
 import {FlexWrapper} from '../../../component/FlexWrapper';
 import styled from 'styled-components';
-import {Button} from '../../../component/Button';
+import {Link} from '../../../component/Link';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
-import rec from './../../../assets/images/svg/Ellipse.svg'
 import {NameTitle} from '../../../component/NameTitle';
 
 export const Main = () => {
@@ -19,7 +18,7 @@ export const Main = () => {
                         <NameTitle>I’m Kristina Tur</NameTitle>
                         <MainTitle>Front-End Developer</MainTitle>
                         <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </Desc>
-                        <Button>Download CV</Button>
+                        <Link href={'#'}>Download CV</Link>
                     </Box>
                 </Wrapper>
                 <Element></Element>
@@ -129,13 +128,13 @@ const MainTitle = styled.h1`
 `
 
 const Desc = styled.p`
-  color: ${Theme.colors.text.primary};
+  color: ${Theme.colors.secondary};
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   max-width: 410px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 `
 
 

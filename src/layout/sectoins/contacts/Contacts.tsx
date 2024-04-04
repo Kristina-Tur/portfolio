@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {SectionTitle} from '../../../component/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
-import {Button} from '../../../component/Button';
+import {Link} from '../../../component/Link';
 import {Contact} from './Contact';
 import {Icon} from '../../../component/icon/icon';
 import {Container} from '../../../component/Container';
@@ -22,7 +22,7 @@ export const Contacts = () => {
                             <Field type={'email'} placeholder={'E-mail'}/>
                             <Field type={'tel'} placeholder={'Phone'}/>
                             <Field as={'textarea'} placeholder={'Massage'}/>
-                            <Button type={'submit'} maxWidth={'100px'}>{'Send'}</Button>
+                            <Link type={'submit'} maxWidth={'100px'}>{'Send'}</Link>
                         </StyledForm>
                     </div>
                     <StyledMyContact>

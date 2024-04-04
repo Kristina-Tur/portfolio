@@ -1,41 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
 import {FlexWrapper} from '../../../component/FlexWrapper';
-import {Icon} from '../../../component/icon/icon';
-import {SectionTitle} from '../../../component/SectionTitle';
 import {Skill} from './Skill';
 import {Container} from '../../../component/Container';
-import {Theme} from '../../../styles/Theme';
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <section>
             <Container>
-                {/*<FlexWrapper >*/}
-                <Box>
+                <FlexWrapper justifyContent={'space-between'} flexWrap={'wrap'} rowGap={'80px'}>
                     <Skill iconId={'HTML'} title={'HTML'}/>
                     <Skill iconId={'css'} title={'CSS'}/>
-                    <Skill iconId={'js'} title={'JavaScript'}/>
-                    <Skill iconId={'ts'} title={'TypeScript'} viewBox={'0 0 314 314'}/>
-                    <Skill iconId={'react'} title={'React'}/>
-                    <Skill iconId={'git'} title={'GitHub'}/>
+                    <Skill iconId={'js'} title={'JavaScript'} viewBox={'0 0 32 32'}/>
+                    <Skill iconId={'ts'} title={'TypeScript'} viewBox={'0 0 32 32'}/>
+                    <Skill iconId={'react'} title={'React'} viewBox={'0 -5 115 115'}/>
+                    <Skill iconId={'git'} title={'GitHub'} viewBox={'0 0 90 90'}/>
                     <Skill iconId={'figma'} title={'Figma'} viewBox={'0 0 210 314'}/>
-                    <Skill iconId={'figma'} title={'Figma'}/>
-                    <Skill iconId={'figma'} title={'Figma'}/>
-                    <Skill iconId={'figma'} title={'Figma'}/>
-                </Box>
-                {/*</FlexWrapper>*/}
+                    <Skill iconId={'figma'} title={'Figma'} viewBox={'0 0 210 314'}/>
+                    <Skill iconId={'figma'} title={'Figma'} viewBox={'0 0 210 314'}/>
+                    <Skill iconId={'figma'} title={'Figma'} viewBox={'0 0 210 314'}/>
+                    <Skill iconId={'figma'} title={'Figma'} viewBox={'0 0 210 314'}/>
+                    <Skill iconId={'figma'} title={'Figma'} viewBox={'0 0 210 314'}/>
+                </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </section>
     );
 };
 
-const StyledSkills = styled.section`
-`
-
-const Box = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 150px;
-`

@@ -1,11 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
 import {Theme} from '../styles/Theme';
 
-type ButtonPropsType = {
+type LinkPropsType = {
     maxWidth?: string
 }
-export const Button = styled.button<ButtonPropsType>`
+export const Link = styled.a<LinkPropsType>`
   color: ${Theme.colors.text.primary};
   font-size: 20px;
   font-weight: 600;
