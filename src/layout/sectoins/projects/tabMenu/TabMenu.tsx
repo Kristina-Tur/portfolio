@@ -8,7 +8,7 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
             <ul>
                 {props.menuItems.map((item, index) => {
                     return <li key={index}>
-                        <Link href="">{item}</Link>
+                        <Link href="#">{item}</Link>
                     </li>
                 })}
             </ul>
@@ -29,7 +29,6 @@ const Link = styled.a`
   color: ${Theme.colors.text.primary};
   font-size: 20px;
   font-weight: 400;
-  line-height: 136%;
   border-radius: 70px;
   border: 2px solid ${Theme.colors.neutral};
   padding: 5px 40px;

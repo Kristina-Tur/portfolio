@@ -13,7 +13,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justifyContent={'flex-end'} alignItems={'center'} >
+                <FlexWrapper justifyContent={'flex-end'} alignItems={'center'} minHeight={'100%'}>
                     <MenuHeader menuItems={headerItems}/>
                 </FlexWrapper>
             </Container>

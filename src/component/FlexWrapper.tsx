@@ -7,6 +7,7 @@ type FlexWrapperPropsType = {
     flexWrap?: string
     minHeight?: string
     rowGap?: string
+    columnGap?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -15,6 +16,7 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   justify-content: ${props => props.justifyContent || 'flex-start'};
   align-items: ${props => props.alignItems || 'stretch'};
   flex-wrap: ${props => props.flexWrap || 'no-wrap'};
-  height: 100%;
-  row-gap: ${props => props.rowGap || undefined}
+  height: ${props => props.minHeight || undefined};
+  row-gap: ${props => props.rowGap || undefined};
+  column-gap: ${props => props.columnGap || undefined};  
 `

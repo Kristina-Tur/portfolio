@@ -20,7 +20,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     display: inline-block;
     width: 120px;
     height: 3px;
-    background-color: #73c9ec;
+    background-color: ${Theme.colors.text.accent};
     border-radius: 4px;
 
     position: absolute;

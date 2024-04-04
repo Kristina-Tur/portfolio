@@ -14,7 +14,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <TabMenu menuItems={projectsItems}/>
-                <FlexWrapper flexWrap={'wrap'} justifyContent={'space-evenly'}>
+                <FlexWrapper flexWrap={'wrap'} justifyContent={'space-around'} rowGap={'50px'} columnGap={'50px'}>
                     <Project src={project1} title={'Project 1'}
                              text={'Application that can help you in learning by flashcards'}/>
                     <Project src={project1} title={'Project 2'}
@@ -34,5 +34,4 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-
 `

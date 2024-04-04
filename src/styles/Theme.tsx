@@ -8,7 +8,7 @@ export const Theme = {
             primary: '#FBFBFC',
             secondary: '#393939',
             neutral: '#959596',
-            accent: '#13ADC7'
+            accent: '#73c9ec'
         }
     }
 }
