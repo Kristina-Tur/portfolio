@@ -9,7 +9,6 @@ export const NameTitle = styled.h2<NameTitlePropsType>`
   font-size: 60px;
   font-weight: 700;
   line-height: 136%;
-  margin-bottom: 30px;
   
   /*position: relative;
   

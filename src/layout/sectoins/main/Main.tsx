@@ -12,16 +12,16 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-              {/*<Element>
+                {/*<Element>
                 <img src={rec} alt={''}/>
               </Element>*/}
-
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
                         <Text>Hello,</Text>
                         <NameTitle>I’m Kristina Tur</NameTitle>
                         <MainTitle>Front-End Developer</MainTitle>
+                        <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </Desc>
                         <Button>Download CV</Button>
                     </Box>
                 </Wrapper>
@@ -33,11 +33,10 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   min-height: 80vh;
-  display: flex;
 
-  position: relative;
-  
-  /*&::after,
+  /*position: relative;*/
+
+    /*&::after,
   &::before {
     content: '';
     position: absolute;
@@ -59,20 +58,18 @@ const StyledMain = styled.section`
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
-  max-width: 1140px;
-  max-height: 500px;
   margin-top: 20px;
-  
+  padding: 40px 100px;
+
   background: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 27, 26, .31);
   border-top-left-radius: 200px;
   border-bottom-right-radius: 200px;
   box-shadow: 0 10px 30px #000;
- 
+
   /*position: relative;*/
 `
 const Element = styled.div`
@@ -97,11 +94,8 @@ const Element1 = styled.div`
   position: relative;
   width: 150px;
   height: 150px;
-  margin: 30px;
   border-radius: 50%;
   background-color: #131880;
-  text-align: center;
-  z-index: 1;
 
   &::before {
     content: "";
@@ -112,7 +106,7 @@ const Element1 = styled.div`
     right: -25px;
     background-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
     border-radius: 50%;
-    /*z-index: -1;*/
+    z-index: -1;
   }
 `
 
@@ -125,7 +119,6 @@ const Photo = styled.div`
   height: 400px;
   border-radius: 50%;
   border: 25px solid ${Theme.colors.secondaryBg};
-  position: relative;
 `
 
 const Box = styled.div`
@@ -139,12 +132,22 @@ const Text = styled.span`
 `
 
 const MainTitle = styled.h1`
-  color: #73c9ec;
+  color: #13ADC7;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+`
+
+const Desc = styled.p`
+  color: ${Theme.colors.text.primary};
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 410px;
+  width: 100%;
+  margin-bottom: 30px;
 `
 
 
