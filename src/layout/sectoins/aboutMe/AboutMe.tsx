@@ -76,8 +76,7 @@ const WrapperIconList = styled.ul`
 `
 
 const WrapperList = styled.ul`
-  list-style-image: linear-gradient(180deg, #A6BCFA 0%, #2157F2 100%);
-  list-style-position: unset;
+  list-style-image: ${Theme.colors.accent};
   margin: 20px 20px 30px;
 `
 
