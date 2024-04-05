@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SectionTitle} from '../../../component/SectionTitle';
+import {SectionTitle} from '../../../component/titles/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
 import {Link} from '../../../component/Link';
 import {Contact} from './Contact';

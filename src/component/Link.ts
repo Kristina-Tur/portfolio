@@ -12,4 +12,5 @@ export const Link = styled.a<LinkPropsType>`
   background-image: ${Theme.colors.accent};
   padding: 15px 65px;
   max-width: ${props => props.maxWidth};
+  cursor: pointer;
 `

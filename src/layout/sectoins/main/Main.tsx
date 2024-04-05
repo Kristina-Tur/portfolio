@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {Link} from '../../../component/Link';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
-import {NameTitle} from '../../../component/NameTitle';
+import {NameTitle} from '../../../component/titles/NameTitle';
 
 export const Main = () => {
     return (

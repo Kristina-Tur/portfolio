@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Theme} from '../styles/Theme';
+import {Theme} from '../../styles/Theme';
 
 type NameTitlePropsType = {
     color?: string
@@ -8,7 +8,6 @@ export const NameTitle = styled.h2<NameTitlePropsType>`
   color: ${props => props.color || Theme.colors.text.primary};
   font-size: 60px;
   font-weight: 700;
-  line-height: 136%;
   
   /*position: relative;
   

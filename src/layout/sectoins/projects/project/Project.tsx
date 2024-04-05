@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import {Theme} from '../../../../styles/Theme';
 import {FlexWrapper} from '../../../../component/FlexWrapper';
+import project1 from './../../../../assets/images/project.webp'
 
 type ProjectPropsTitle = {
     src: string
+    srcSet: string
     title: string
     text: string
 }
@@ -12,7 +14,11 @@ type ProjectPropsTitle = {
 export const Project = (props: ProjectPropsTitle) => {
     return (
         <StyledProject>
-            <Image src={props.src} alt={'Project'}/>
+            <picture>
+                <source srcSet={props.srcSet} type='image/webp' />
+                    <source srcSet={props.src} type='image/png' />
+                        <Image src={props.src} alt={'Project'} />
+            </picture>
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
             <FlexWrapper justifyContent={'space-around'}>
@@ -55,6 +61,7 @@ const Image = styled.img`
   width: 100%;
   border-radius: 26px 26px 0 0;
   margin-bottom: 40px;
+
 `
 
 const Text = styled.p`
