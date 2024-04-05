@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import location from '../../../assets/images/svg/location.svg';
 import {Theme} from '../../../styles/Theme';
 
 type ContactPropsType = {
+    src: string
     title: string
     text: string
 }
 export const Contact = (props: ContactPropsType) => {
     return (
         <StyledContact>
-            <Image src={location}/>
+            <Image src={props.src} />
             <div>
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
+                <Title>{props.title}</Title>
+                <Text>{props.text}</Text>
             </div>
         </StyledContact>
     );

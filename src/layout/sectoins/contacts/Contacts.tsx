@@ -2,56 +2,50 @@ import React from 'react';
 import styled from 'styled-components';
 import {SectionTitle} from '../../../component/titles/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
-import {Link} from '../../../component/Link';
 import {Contact} from './Contact';
-import {Icon} from '../../../component/icon/icon';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
+import location from './../../../assets/images/svg/location.svg'
+import tel from './../../../assets/images/svg/telephone.svg'
+import email from './../../../assets/images/svg/email.svg'
 import ins from './../../../assets/images/svg/instagram.svg'
+import {Social} from '../../../component/social/Social';
 
 export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
                 <SectionTitle>Contacts</SectionTitle>
-                <Wrapper>
-                    <div>
-                        <Text>Get in touch with me</Text>
-                        <StyledForm>
-                            <Field placeholder={'Name'}/>
-                            <Field type={'email'} placeholder={'E-mail'}/>
-                            <Field type={'tel'} placeholder={'Phone'}/>
-                            <Field as={'textarea'} placeholder={'Massage'}/>
-                            <Link type={'submit'} maxWidth={'100px'}>{'Send'}</Link>
-                        </StyledForm>
-                    </div>
-                    <StyledMyContact>
-                        <Contact title={'Location'} text={'Brest/Belarus'}/>
-                        <Contact title={'Phone'} text={'+375292400937'}/>
-                        <Contact title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
-                    </StyledMyContact>
-                </Wrapper>
-                <Social>
+                <FlexWrapper flexDirection={'column'} alignItems={'center'}>
+                    <Wrapper>
+                        <div>
+                            <Text>Get in touch with me</Text>
+                            <StyledForm>
+                                <Field placeholder={'Name'}/>
+                                <Field type={'email'} placeholder={'E-mail'}/>
+                                <Field type={'tel'} placeholder={'Phone'}/>
+                                <Field as={'textarea'} placeholder={'Massage'}/>
+                                <Button type={'submit'}>{'Send'}</Button>
+                            </StyledForm>
+                        </div>
+                        <FlexWrapper flexDirection={'column'} justifyContent={'center'} rowGap={'50px'}>
+                            <Contact src={location} title={'Location'} text={'Brest/Belarus'}/>
+                            <Contact src={tel} title={'Phone'} text={'+375292400937'}/>
+                            <Contact src={email} title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
+                        </FlexWrapper>
+                    </Wrapper>
                     <SocialList>
-                        <SocialItem>
-                            <SocialLink>
-                                <Img src={ins}/>
-                            </SocialLink>
-                        </SocialItem>
+                        <Social iconId={'instagram'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
+                        <Social iconId={'telegram'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
+                        <Social iconId={'linkedin'} width={'28'} height={'28'} viewBox={'0 0 45 45'}/>
                     </SocialList>
-                </Social>
-
+                </FlexWrapper>
             </Container>
         </StyledContacts>
     );
 };
-const Img = styled.img`
-  max-width: 28px;
-  width: 100%;
-  margin-left: 15px;
-`
+
 const StyledContacts = styled.section`
-    margin: 0 auto;
 `
 
 const Wrapper = styled.div`
@@ -90,9 +84,8 @@ const Field = styled.input`
   font-weight: 400;
   border-radius: 20px;
   background-color: ${Theme.colors.neutral};
-  padding: 24px 20px;
+  padding: 18px 20px;
   border: none;
-
   color: ${Theme.colors.text.secondary};
 
   &:focus-visible {
@@ -100,24 +93,19 @@ const Field = styled.input`
   }
 `
 
-const StyledMyContact = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 50px;
+const Button = styled.button`
+  color: ${Theme.colors.text.primary};
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 83px;
+  background-image: ${Theme.colors.accent};
+  padding: 15px 65px;
+  cursor: pointer;
 `
-const Social = styled.div`
 
-`
 const SocialList = styled.ul`
   display: flex;
   justify-content: center;
-`
-const SocialItem = styled.li`
-
-`
-const SocialLink = styled.a`
-
 `
 
 

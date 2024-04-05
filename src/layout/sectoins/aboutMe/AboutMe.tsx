@@ -8,6 +8,7 @@ import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
 import {NameTitle} from '../../../component/titles/NameTitle';
 import {Icon} from '../../../component/icon/icon';
+import {Social} from '../../../component/social/Social';
 
 export const AboutMe = () => {
     return (
@@ -16,21 +17,9 @@ export const AboutMe = () => {
                 <SectionTitle color={`${Theme.colors.text.secondary}`}>About me</SectionTitle>
                 <Wrapper>
                     <WrapperIconList>
-                        <li>
-                            <a href="">
-                                <Icon iconId={'instagramGray'} height={'28'} width={'28'} viewBox={'0 0 24 24'}/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <Icon iconId={'telegramGray'} height={'28'} width={'28'} viewBox={'1 0 22 22'}/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <Icon iconId={'linkedinGray'} height={'28'} width={'28'} viewBox={'0 0 24 24'}/>
-                            </a>
-                        </li>
+                        <Social iconId={'instagramGray'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
+                        <Social iconId={'telegramGray'} width={'28'} height={'28'} viewBox={'1 0 22 22'}/>
+                        <Social iconId={'linkedinGray'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
                     </WrapperIconList>
                     <NameTitle color={`${Theme.colors.text.secondary}`}>I’m Kristina Tur</NameTitle>
                     <WrapperList>
