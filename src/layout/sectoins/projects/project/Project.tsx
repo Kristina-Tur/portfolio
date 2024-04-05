@@ -61,7 +61,6 @@ const Image = styled.img`
   width: 100%;
   border-radius: 26px 26px 0 0;
   margin-bottom: 40px;
-
 `
 
 const Text = styled.p`

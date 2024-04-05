@@ -51,7 +51,6 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-    /*background-image: url(${backgroundImageWebp});*/
   background-image: image-set('${backgroundImageWebp}' type('image/webp'),
   '${backgroundImagePng}' type('image/png'));
   background-repeat: no-repeat;
