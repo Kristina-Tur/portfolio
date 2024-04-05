@@ -39,14 +39,14 @@ const IconWrapper = styled.div`
   &::before{
     content: '';
     display: inline-block;
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: ${Theme.colors.secondary};
     
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -8px;
+    left: -8px;
     z-index: -1;
   }
 `

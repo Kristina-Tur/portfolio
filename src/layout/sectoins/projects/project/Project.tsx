@@ -19,8 +19,6 @@ export const Project = (props: ProjectPropsTitle) => {
                 <Link href={'#'}>View project</Link>
                 <Link href={'#'}>Code</Link>
             </FlexWrapper>
-            {/*</StyledProject2>
-            <StyledProject3></StyledProject3>*/}
         </StyledProject>
     );
 };
@@ -32,31 +30,32 @@ const StyledProject = styled.div`
   border: 1px solid ${Theme.colors.neutral};
   border-radius: 26px;
   text-align: center;
+  box-shadow: 0 8px 32px 0 ${Theme.colors.border.projectBoxShadow};
 
   position: relative;
 `
 
 const Title = styled.h3`
-  color: ${Theme.colors.text.primary};
+  color: ${Theme.colors.secondary};
   font-size: 30px;
   font-weight: 700;
+  letter-spacing: 2px;
+  background-image: ${Theme.colors.translucentAccent};
+  padding: 10px;
+  width: 100%;
 
   position: absolute;
-  top: 157px;
-  left: 100px;
-`
-
-const Box = styled.div`
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  transform-origin: top left;
 `
 
 const Image = styled.img`
   width: 100%;
   border-radius: 26px 26px 0 0;
   margin-bottom: 40px;
-
-
 `
-
 
 const Text = styled.p`
   color: ${Theme.colors.text.primary};
