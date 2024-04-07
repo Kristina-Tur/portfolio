@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.2;
+    
   }
 
   a {
@@ -45,5 +46,9 @@ export const GlobalStyles = createGlobalStyle`
   
   section:nth-of-type(even){
     background-color: ${Theme.colors.secondary};
+  }
+  
+  h2{
+    font-size: calc( (100vw - 375px)/(1280 - 375) * (32 - 20) + 20px);
   }
 `
