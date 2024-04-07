@@ -17,7 +17,7 @@ export const Main = () => {
                         <NameTitle>I’m Kristina Tur</NameTitle>
                         <MainTitle>Front-End Developer</MainTitle>
                         <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </Desc>
-                        <Link href={'#'}>Download CV</Link>
+                        <Link href={''}>Download CV</Link>
                     </Box>
                 </Wrapper>
                 <Element></Element>
