@@ -35,8 +35,8 @@ export const Contacts = () => {
                         </FlexWrapper>
                     </Wrapper>
                     <SocialList>
-                        <Social iconId={'instagram'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
-                        <Social iconId={'telegram'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
+                        <Social iconId={'instagram'} width={'28'} height={'28'} viewBox={'0 0 2500 2500'}/>
+                        <Social iconId={'telegram'} width={'28'} height={'28'} viewBox={'0 5 50 50'}/>
                         <Social iconId={'linkedin'} width={'28'} height={'28'} viewBox={'0 0 45 45'}/>
                     </SocialList>
                 </FlexWrapper>
