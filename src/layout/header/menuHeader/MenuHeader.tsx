@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Theme} from '../../styles/Theme';
+import {Theme} from '../../../styles/Theme';
 
 export const MenuHeader = (props: { menuItems: Array<string> }) => {
     return (
@@ -27,6 +27,10 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     gap: 60px;
+  }
+  
+  @media ${Theme.media.tablet}{
+    display: none;
   }
 `
 

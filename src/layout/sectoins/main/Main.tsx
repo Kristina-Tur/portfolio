@@ -33,7 +33,7 @@ const StyledMain = styled.section`
   position: relative;
   z-index: 0;
 
-  /*position: relative;
+  position: relative;
 
     &::after,
   &::before {
@@ -41,9 +41,11 @@ const StyledMain = styled.section`
     position: absolute;
     top: 22%;
     left: 18%;
-    width: 12px;
-    height: 75px;
-    background-image: ${Theme.colors.accent};
+    width: 14px;
+    height: 74px;
+    background-color: ${Theme.colors.main};
+      opacity: 0.5;
+      z-index: 2;
   }
 
   &::after {
@@ -52,7 +54,7 @@ const StyledMain = styled.section`
 
   &::before {
     transform: translate(-50%, -50%) rotate(-45deg);
-  }*/
+  }
 `
 
 const Wrapper = styled.div`
@@ -75,10 +77,10 @@ const Wrapper = styled.div`
 
 const Element = styled.div`
   position: relative;
-  left: 940px;
-  bottom: 155px;
-  width: 150px;
-  height: 150px;
+  left: 990px;
+  bottom: 115px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: ${Theme.colors.primaryBg};
   margin-bottom: -150px;

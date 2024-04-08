@@ -5,7 +5,7 @@ import {Projects} from '../sectoins/projects/Projects';
 import {Container} from '../../component/Container';
 import {FlexWrapper} from '../../component/FlexWrapper';
 import {Theme} from '../../styles/Theme';
-import {MenuHeader} from './MenuHeader';
+import {MenuHeader} from './menuHeader/MenuHeader';
 
 // rsc
 const headerItems = ['Home', 'Projects', 'About', 'Contacts']
