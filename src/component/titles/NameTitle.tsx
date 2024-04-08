@@ -6,7 +6,8 @@ type NameTitlePropsType = {
 }
 export const NameTitle = styled.h2<NameTitlePropsType>`
   color: ${props => props.color || Theme.colors.text.primary};
-  font-size: 60px;
+  /*font-size: 60px;*/
+  font-size: calc( (100vw - 375px)/(1280 - 375) * (60 - 34) + 34px);
   font-weight: 700;
   
   /*position: relative;

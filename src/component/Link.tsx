@@ -8,7 +8,7 @@ export const Link = styled.a`
   font-weight: 600;
   border-radius: 83px;
   background-image: ${Theme.colors.accent};
-  padding: 11px 45px;
+  padding: 12px 45px;
   
   &:hover {
     transform: translateY(-5px);

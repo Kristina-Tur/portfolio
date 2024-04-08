@@ -113,7 +113,8 @@ const Box = styled.div`
 
 const Text = styled.span`
   color: ${Theme.colors.text.primary};
-  font-size: 18px;
+  /*font-size: 18px;*/
+  font-size: calc( (100vw - 375px)/(1280 - 375) * (18 - 14) + 14px);
   line-height: 1.6;
 `
 
@@ -135,5 +136,6 @@ const Desc = styled.p`
   width: 100%;
   margin-bottom: 45px;
 `
+
 
 

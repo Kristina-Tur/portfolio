@@ -49,6 +49,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   h2{
-    font-size: calc( (100vw - 375px)/(1280 - 375) * (32 - 20) + 20px);
+    
   }
 `

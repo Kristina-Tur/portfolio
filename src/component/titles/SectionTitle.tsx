@@ -8,7 +8,7 @@ type SectionTitlePropsType = {
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
   color: ${props => props.color || Theme.colors.text.primary} ;
   font-weight: 600;
-  line-height: 136%;
+  font-size: calc( (100vw - 375px)/(1280 - 375) * (32 - 20) + 20px);
   text-align: center;
   margin-bottom: 70px;
 
