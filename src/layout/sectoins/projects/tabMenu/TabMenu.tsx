@@ -5,9 +5,9 @@ import {Theme} from '../../../../styles/Theme';
 export const TabMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledNav>
-            <ul>
+            <ul role={'menu'}>
                 {props.menuItems.map((item, index) => {
-                    return <li key={index}>
+                    return <li key={index} role={'menuItem'}>
                         <Link href="#">{item}</Link>
                     </li>
                 })}

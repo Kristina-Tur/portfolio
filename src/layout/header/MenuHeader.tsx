@@ -4,9 +4,9 @@ import {Theme} from '../../styles/Theme';
 export const MenuHeader = (props: { menuItems: Array<string> }) => {
     return (
         <StyledNav>
-            <ul>
+            <ul role={'menu'}>
                 {props.menuItems.map((item, index) => {
-                    return <List key={index}>
+                    return <List key={index} role={'menuItem'}>
                         <Link href="">
                             {item}
                             <Mask>
