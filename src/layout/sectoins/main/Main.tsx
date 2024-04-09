@@ -1,10 +1,10 @@
 import React from 'react';
-import photo from '../../../assets/images/photo2.jpg'
+import photo from '../../../assets/images/IMG_4536.jpg'
 import styled from 'styled-components';
 import {Link} from '../../../component/Link';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
-import {NameTitle} from '../../../component/titles/NameTitle';
+import {font} from '../../../styles/Common';
 
 export const Main = () => {
     return (
@@ -102,7 +102,7 @@ const Photo = styled.div`
   background-image: url(${photo});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: 20% 50%;
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -114,26 +114,20 @@ const Box = styled.div`
 `
 
 const Text = styled.span`
-  color: ${Theme.colors.text.primary};
-  /*font-size: 18px;*/
-  font-size: calc( (100vw - 375px)/(1280 - 375) * (18 - 14) + 14px);
-  line-height: 1.6;
+  ${font({weight: 400, color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 18, FMin: 14})};
+`
+
+const NameTitle = styled.h2`
+  ${font({weight: 700, color: Theme.colors.text.primary, FMax: 60, FMin: 34})};
 `
 
 const MainTitle = styled.h1`
-  color: ${Theme.colors.text.accent};
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 50px;
-  margin-bottom: 10px;
+  ${font({color: Theme.colors.text.accent, letter: '1px', FMax: 30, FMin: 20})};
+  margin: 15px 0 18px;
 `
 
 const Desc = styled.p`
-  color: ${Theme.colors.secondary};
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
+  ${font({weight: 400, lineHeight: 1.5, FMax: 20, FMin: 14})};
   max-width: 410px;
   width: 100%;
   margin-bottom: 45px;

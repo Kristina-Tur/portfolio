@@ -6,9 +6,8 @@ import backgroundImagePng from './../../../assets/images/map.png'
 import {Link} from '../../../component/Link';
 import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
-import {NameTitle} from '../../../component/titles/NameTitle';
-import {Icon} from '../../../component/icon/icon';
 import {Social} from '../../../component/social/Social';
+import {font} from '../../../styles/Common';
 
 export const AboutMe = () => {
     return (
@@ -21,7 +20,7 @@ export const AboutMe = () => {
                         <Social iconId={'telegramGray'} width={'28'} height={'28'} viewBox={'1 0 22 22'}/>
                         <Social iconId={'linkedinGray'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
                     </WrapperIconList>
-                    <NameTitle color={`${Theme.colors.text.secondary}`}>I’m Kristina Tur</NameTitle>
+                    <NameTitle>I’m Kristina Tur</NameTitle>
                     <WrapperList>
                         <ListItem>28 years old</ListItem>
                         <ListItem>Higher technological education in the field of garment production</ListItem>
@@ -62,6 +61,10 @@ const WrapperIconList = styled.ul`
   justify-content: flex-end;
   column-gap: 15px;
   margin-bottom: 20px;
+`
+
+const NameTitle = styled.h2`
+  ${font({weight: 700, color: Theme.colors.text.secondary, FMax: 60, FMin: 34})};
 `
 
 const WrapperList = styled.ul`
