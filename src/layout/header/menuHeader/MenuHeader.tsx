@@ -26,6 +26,7 @@ export const MenuHeader = (props: { menuItems: Array<string> }) => {
 const StyledNav = styled.nav`
   ul {
     display: flex;
+    justify-content: flex-end;
     gap: 60px;
   }
   

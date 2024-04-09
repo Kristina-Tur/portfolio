@@ -13,9 +13,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justifyContent={'flex-end'} alignItems={'center'} minHeight={'100%'}>
                     <MenuHeader menuItems={headerItems}/>
-                </FlexWrapper>
             </Container>
         </StyledHeader>
     );
@@ -24,7 +22,10 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background-color: ${Theme.colors.primaryBg};
   min-height: 60px;
+  
   display: flex;
+  align-items: center;
+  
   position: fixed;
   top: 0;
   right: 0;
