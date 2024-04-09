@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Logo} from '../../component/logo/Logo';
 import {Projects} from '../sectoins/projects/Projects';
 import {Container} from '../../component/Container';
-import {FlexWrapper} from '../../component/FlexWrapper';
 import {Theme} from '../../styles/Theme';
 import {MenuHeader} from './menuHeader/MenuHeader';
+import {MenuBurger} from './mobileMenu/MenuBurger';
 
 // rsc
 const headerItems = ['Home', 'Projects', 'About', 'Contacts']
@@ -14,6 +13,7 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                     <MenuHeader menuItems={headerItems}/>
+                    <MenuBurger menuItems={headerItems}/>
             </Container>
         </StyledHeader>
     );
