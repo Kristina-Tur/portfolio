@@ -15,8 +15,8 @@ function App() {
         <div className="App">
             <Header/>
             <Main/>
-            {/*<Skills/>
-            <Projects/>
+            <Skills/>
+            {/*<Projects/>
             <AboutMe/>
             <Contacts/>
             <Footer/>*/}

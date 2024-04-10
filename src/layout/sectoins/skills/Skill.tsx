@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from '../../../component/icon/icon';
 import styled from 'styled-components';
 import {Theme} from '../../../styles/Theme';
+import {font} from '../../../styles/Common';
 
 type SkillPropsType = {
     iconId: string
@@ -52,9 +53,6 @@ const IconWrapper = styled.div`
 `
 
 const SkillTitle = styled.p`
-  color: ${Theme.colors.text.secondary};
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 5.5;
+  ${font({color: Theme.colors.text.secondary,FMax: 20, FMin: 20, lineHeight: 5.5})}
   text-align: center;
 `

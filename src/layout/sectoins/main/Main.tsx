@@ -87,12 +87,16 @@ const WrapperContent = styled.div`
   padding: 40px 100px; 
 
   @media ${Theme.media.desktop}{
-    padding: 40px 50px;
+    padding: 40px 60px;
   }
   
   @media ${Theme.media.tablet}{
     max-width: 590px;
     justify-content: center;
+  }
+  
+  @media ${Theme.media.mobile}{
+    padding: 40px 30px;
   }
 `
 

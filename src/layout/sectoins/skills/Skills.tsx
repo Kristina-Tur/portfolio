@@ -7,7 +7,7 @@ export const Skills = () => {
     return (
         <section>
             <Container>
-                <FlexWrapper justifyContent={'space-between'} flexWrap={'wrap'} rowGap={'80px'}>
+                <FlexWrapper justifyContent={'space-evenly'} flexWrap={'wrap'} rowGap={'80px'} columnGap={'20px'}>
                     <Skill iconId={'HTML'} title={'HTML'}/>
                     <Skill iconId={'css'} title={'CSS'}/>
                     <Skill iconId={'js'} title={'JavaScript'} viewBox={'0 0 32 32'}/>
