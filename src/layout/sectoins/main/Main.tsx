@@ -11,6 +11,7 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <ElementCross></ElementCross>
+                <BgWrapper></BgWrapper>
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
@@ -31,32 +32,40 @@ const StyledMain = styled.section`
   min-height: 80vh;
   display: flex;
   align-items: center;
+  
   position: relative;
   z-index: 0;
+`
+const BgWrapper = styled.div`
+  background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 27, 26, .31);
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  box-shadow: 0 10px 30px #000;
+  max-width: 1110px;
+  width: 100%;
+  min-height: 480px;
+  
+  position: absolute;
+  z-index: 1;
 `
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
   padding: 40px 100px;
 
-  background: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(26, 27, 26, .31);
-  border-top-left-radius: 200px;
-  border-bottom-right-radius: 200px;
-  box-shadow: 0 10px 30px #000;
-  
   position: relative;
   z-index: 1;
 `
 
 const Element = styled.div`
   position: relative;
+  z-index: 0;
   left: 990px;
-  bottom: 115px;
+  bottom: 125px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -83,8 +92,9 @@ const ElementCross = styled.div`
   &::before{
     content: '';
     position: absolute;
+    z-index: -1;
     left: 50px;
-    top: 15px;
+    top: -10px;
     width: 14px;
     height: 74px;
     background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.60) -6.76%, rgba(148, 93, 214, 0.5) 102.96%);

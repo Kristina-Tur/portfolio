@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import {Theme} from '../styles/Theme';
+import {font} from '../styles/Common';
 
 
 export const Link = styled.a`
+  ${font({color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 20, FMin: 14})};
   color: ${Theme.colors.text.primary};
   font-size: 20px;
   font-weight: 600;
