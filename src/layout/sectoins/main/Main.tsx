@@ -37,7 +37,7 @@ const StyledMain = styled.section`
   position: relative;
   z-index: 0;
 `
-const BgWrapper = styled.div`
+/*const BgWrapper = styled.div`
   background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 27, 26, .31);
@@ -57,27 +57,43 @@ const BgWrapper = styled.div`
     width: 100%;
     min-height: 845px;
   }
-`
+`*/
 
 const Wrapper = styled.div`
+  background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 27, 26, .31);
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  box-shadow: 0 10px 30px #000;
+
+  max-width: 1110px;
+  width: 100%;
+  min-height: 480px;  
+    
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*flex-wrap: wrap;*/
-  /*max-width: 1110px;*/
+  flex-wrap: wrap;
   padding: 40px 100px; 
 
   position: relative;
   z-index: 1;
 
   @media ${Theme.media.desktop}{
-    flex-direction: column;
+    padding: 40px 50px;
+  }
+  
+  @media ${Theme.media.tablet}{
+    max-width: 590px;
+    /*min-height: 845px;*/
+    margin: 0 auto;
+    justify-content: center;
   }
 `
 
 const Element = styled.div`
   position: relative;
-  z-index: 0;
   left: 990px;
   bottom: 125px;
   width: 100px;
@@ -96,6 +112,16 @@ const Element = styled.div`
     background-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
     border-radius: 50%;
     z-index: -1;
+  }
+  
+  @media ${Theme.media.desktop}{
+    display: none;
+  }
+
+  @media ${Theme.media.tablet}{
+    display: block;
+    left: 600px;
+    bottom: 120px;
   }
 `
 
@@ -121,6 +147,10 @@ const ElementCross = styled.div`
   &::before {
     transform: rotate(-45deg);
   }
+
+  @media ${Theme.media.tablet}{
+    left: 130px;
+  }
 `
 
 const Photo = styled.div`
@@ -128,22 +158,28 @@ const Photo = styled.div`
   '${photoGpg}' type('image/jpg'));
   background-repeat: no-repeat;
   background-size: cover/*220%*/;
-  background-position: 32% 0;
+  background-position: 23% 0;
+  border-radius: 50%;
+  border: 25px solid ${Theme.colors.text.primary};
+  
   max-width: 400px;
   width: 100%;
   min-height: 400px;
-  border-radius: 50%;
-  border: 25px solid ${Theme.colors.text.primary};
+  
 
-  /*@media ${Theme.media.desktop}{
-    max-width: 350px;
-    min-height: 350px;
-    margin-right: 30px;
-  }*/
+  @media ${Theme.media.tablet}{
+    max-width: 330px;
+    min-height: 330px;
+    margin-bottom: 25px;
+  }
 `
 
 const Box = styled.div`
-  height: 400px;
+  min-height: 400px;
+  
+  @media ${Theme.media.tablet}{
+    min-height: 350px;
+  }
 `
 
 const Text = styled.span`
