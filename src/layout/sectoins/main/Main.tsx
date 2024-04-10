@@ -6,60 +6,71 @@ import {Link} from '../../../component/Link';
 import {Container} from '../../../component/Container';
 import {Theme} from '../../../styles/Theme';
 import {font} from '../../../styles/Common';
+import {Circle} from './components/Circle';
+import {Cross} from './components/Cross';
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <ElementCross></ElementCross>
-                {/*<BgWrapper></BgWrapper>*/}
                 <Wrapper>
-                    <Photo></Photo>
-                    <Box>
-                        <Text>Hello,</Text>
-                        <NameTitle>I’m Kristina Tur</NameTitle>
-                        <MainTitle>Front-End Developer</MainTitle>
-                        <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </Desc>
-                        <Link href={''}>Download CV</Link>
-                    </Box>
+                    <CrossWrapper>
+                        <Cross/>
+                    </CrossWrapper>
+                    <WrapperContent>
+                        <Photo></Photo>
+                        <Box>
+                            <Text>Hello,</Text>
+                            <NameTitle>I’m Kristina Tur</NameTitle>
+                            <MainTitle>Front-End Developer</MainTitle>
+                            <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </Desc>
+                            <Link href={''}>Download CV</Link>
+                        </Box>
+                    </WrapperContent>
+                    <CircleWrapper>
+                        <Circle/>
+                    </CircleWrapper>
                 </Wrapper>
-                <Element></Element>
+
+             {/*   <Element></Element>*/}
             </Container>
         </StyledMain>
     );
 };
 
+
 const StyledMain = styled.section`
   min-height: 80vh;
   display: flex;
   align-items: center;
-  
-  position: relative;
-  z-index: 0;
 `
-/*const BgWrapper = styled.div`
-  background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(26, 27, 26, .31);
-  border-top-left-radius: 200px;
-  border-bottom-right-radius: 200px;
-  box-shadow: 0 10px 30px #000;
-  
-  max-width: 1110px; 
-  width: 100%;
-  min-height: 480px;
-  
-  position: absolute;
-  z-index: 1;
-  
-  @media ${Theme.media.desktop}{
-    max-width: 590px;
-    width: 100%;
-    min-height: 845px;
-  }
-`*/
 
 const Wrapper = styled.div`
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  
+  @media ${Theme.media.tablet}{
+    width: fit-content;
+  }
+`
+
+const CrossWrapper = styled.div`
+  position: absolute;
+  width: fit-content;
+  top: -30px;
+  left: 15px;
+`
+
+const CircleWrapper = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: fit-content;
+  right: -5px;
+  bottom: -15px;
+`
+
+const WrapperContent = styled.div`
   background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.50) -6.76%, rgba(0, 66, 255, 0.05) 102.96%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 27, 26, .31);
@@ -77,9 +88,6 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   padding: 40px 100px; 
 
-  position: relative;
-  z-index: 1;
-
   @media ${Theme.media.desktop}{
     padding: 40px 50px;
   }
@@ -89,67 +97,6 @@ const Wrapper = styled.div`
     /*min-height: 845px;*/
     margin: 0 auto;
     justify-content: center;
-  }
-`
-
-const Element = styled.div`
-  position: relative;
-  left: 990px;
-  bottom: 125px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: ${Theme.colors.primaryBg};
-  margin-bottom: -150px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    bottom: -25px;
-    left: -25px;
-    right: -25px;
-    background-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  @media ${Theme.media.desktop}{
-    display: none;
-  }
-
-  @media ${Theme.media.tablet}{
-    display: block;
-    left: 600px;
-    bottom: 120px;
-  }
-`
-
-const ElementCross = styled.div`
-  position: relative;
-
-  &::after,
-  &::before{
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 50px;
-    top: -10px;
-    width: 14px;
-    height: 74px;
-    background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.60) -6.76%, rgba(148, 93, 214, 0.5) 102.96%);
-  }
-  
-  &::after {
-    transform: rotate(-135deg);
-  }
-
-  &::before {
-    transform: rotate(-45deg);
-  }
-
-  @media ${Theme.media.tablet}{
-    left: 130px;
   }
 `
 
