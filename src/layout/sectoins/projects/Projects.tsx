@@ -8,6 +8,7 @@ import projectPng from './../../../assets/images/project.png'
 import projectWebp from './../../../assets/images/project.webp'
 import {Container} from '../../../component/Container';
 import bg from './../../../assets/images/Dots.svg'
+import {Dots} from './components/Dots';
 
 const projectsItems = ['All', '1', '2']
 export const Projects = () => {
@@ -37,7 +38,6 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-    background-image: url('${bg}');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  
 `
+
