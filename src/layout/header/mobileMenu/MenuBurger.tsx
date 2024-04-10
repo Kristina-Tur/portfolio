@@ -37,7 +37,7 @@ const StyledNav = styled.nav`
 `
 const BurgerButton = styled.button<{isOpen: boolean}>`
   position: fixed;
-  top: 30px;
+  top: 17px;
   right: 30px;
   width: 36px;
   height: 26px;

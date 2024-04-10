@@ -31,8 +31,6 @@ export const Main = () => {
                         <Circle/>
                     </CircleWrapper>
                 </Wrapper>
-
-             {/*   <Element></Element>*/}
             </Container>
         </StyledMain>
     );
@@ -94,8 +92,6 @@ const WrapperContent = styled.div`
   
   @media ${Theme.media.tablet}{
     max-width: 590px;
-    /*min-height: 845px;*/
-    margin: 0 auto;
     justify-content: center;
   }
 `
@@ -104,8 +100,8 @@ const Photo = styled.div`
   background-image: image-set('${photoWebp}' type('image/webp'),
   '${photoGpg}' type('image/jpg'));
   background-repeat: no-repeat;
-  background-size: cover/*220%*/;
-  background-position: 23% 0;
+  background-size: 220%;
+  background-position: 32% 0;
   border-radius: 50%;
   border: 25px solid ${Theme.colors.text.primary};
   
@@ -119,6 +115,12 @@ const Photo = styled.div`
     min-height: 330px;
     margin-bottom: 25px;
   }
+  
+  @media ${Theme.media.mobile}{
+    max-width: 200px;
+    min-height: 200px;
+    border-width: 15px;
+  }
 `
 
 const Box = styled.div`
@@ -127,22 +129,18 @@ const Box = styled.div`
   @media ${Theme.media.tablet}{
     min-height: 350px;
   }
+  
+  @media ${Theme.media.mobile}{
+    min-height: 300px;
+  }
 `
 
 const Text = styled.span`
   ${font({weight: 400, color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 18, FMin: 14})};
-
-  /*@media ${Theme.media.desktop}{
-    text-align: center;
-  }*/
 `
 
 const NameTitle = styled.h2`
   ${font({weight: 700, color: Theme.colors.text.primary, FMax: 60, FMin: 34})};
-
-  /*@media ${Theme.media.desktop}{
-    text-align: center;
-  }*/
 `
 
 const MainTitle = styled.h1`
@@ -155,10 +153,6 @@ const Desc = styled.p`
   max-width: 410px;
   width: 100%;
   margin-bottom: 45px;
-
-  /*@media ${Theme.media.desktop}{
-    margin-bottom: 30px;
-  }*/
 `
 
 
