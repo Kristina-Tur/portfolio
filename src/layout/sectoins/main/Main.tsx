@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../../../assets/images/IMG_4536.jpg'
+import photo from '../../../assets/images/IMG_4532.jpg'
 import styled from 'styled-components';
 import {Link} from '../../../component/Link';
 import {Container} from '../../../component/Container';
@@ -10,6 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
+                <ElementCross></ElementCross>
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
@@ -32,29 +33,6 @@ const StyledMain = styled.section`
   align-items: center;
   position: relative;
   z-index: 0;
-
-  position: relative;
-
-    &::after,
-  &::before {
-    content: '';
-    position: absolute;
-    top: 22%;
-    left: 18%;
-    width: 14px;
-    height: 74px;
-    background-color: ${Theme.colors.main};
-      opacity: 0.5;
-      z-index: 2;
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(-135deg);
-  }
-
-  &::before {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
 `
 
 const Wrapper = styled.div`
@@ -98,11 +76,34 @@ const Element = styled.div`
   }
 `
 
+const ElementCross = styled.div`
+  position: relative;
+
+  &::after,
+  &::before{
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    width: 14px;
+    height: 74px;
+    background-image: linear-gradient(147deg, rgba(57, 57, 57, 0.60) -6.76%, rgba(148, 93, 214, 0.5) 102.96%);
+  }
+  
+  &::after {
+    transform: rotate(-135deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+`
+
 const Photo = styled.div`
   background-image: url(${photo});
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 20% 50%;
+  background-size: 235%;
+  background-position: 50% 0%;
   width: 400px;
   height: 400px;
   border-radius: 50%;
