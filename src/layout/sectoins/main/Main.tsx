@@ -1,5 +1,6 @@
 import React from 'react';
-import photo from '../../../assets/images/IMG_4532.jpg'
+import photoWebp from '../../../assets/images/photo.webp'
+import photoGpg from '../../../assets/images/photo.jpg'
 import styled from 'styled-components';
 import {Link} from '../../../component/Link';
 import {Container} from '../../../component/Container';
@@ -11,7 +12,7 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <ElementCross></ElementCross>
-                <BgWrapper></BgWrapper>
+                {/*<BgWrapper></BgWrapper>*/}
                 <Wrapper>
                     <Photo></Photo>
                     <Box>
@@ -43,22 +44,35 @@ const BgWrapper = styled.div`
   border-top-left-radius: 200px;
   border-bottom-right-radius: 200px;
   box-shadow: 0 10px 30px #000;
-  max-width: 1110px;
+  
+  max-width: 1110px; 
   width: 100%;
   min-height: 480px;
   
   position: absolute;
   z-index: 1;
+  
+  @media ${Theme.media.desktop}{
+    max-width: 590px;
+    width: 100%;
+    min-height: 845px;
+  }
 `
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 100px;
+  /*flex-wrap: wrap;*/
+  /*max-width: 1110px;*/
+  padding: 40px 100px; 
 
   position: relative;
   z-index: 1;
+
+  @media ${Theme.media.desktop}{
+    flex-direction: column;
+  }
 `
 
 const Element = styled.div`
@@ -110,14 +124,22 @@ const ElementCross = styled.div`
 `
 
 const Photo = styled.div`
-  background-image: url(${photo});
+  background-image: image-set('${photoWebp}' type('image/webp'),
+  '${photoGpg}' type('image/jpg'));
   background-repeat: no-repeat;
-  background-size: 235%;
-  background-position: 50% 0%;
-  width: 400px;
-  height: 400px;
+  background-size: cover/*220%*/;
+  background-position: 32% 0;
+  max-width: 400px;
+  width: 100%;
+  min-height: 400px;
   border-radius: 50%;
-  border: 25px solid ${Theme.colors.secondary};
+  border: 25px solid ${Theme.colors.text.primary};
+
+  /*@media ${Theme.media.desktop}{
+    max-width: 350px;
+    min-height: 350px;
+    margin-right: 30px;
+  }*/
 `
 
 const Box = styled.div`
@@ -126,10 +148,18 @@ const Box = styled.div`
 
 const Text = styled.span`
   ${font({weight: 400, color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 18, FMin: 14})};
+
+  /*@media ${Theme.media.desktop}{
+    text-align: center;
+  }*/
 `
 
 const NameTitle = styled.h2`
   ${font({weight: 700, color: Theme.colors.text.primary, FMax: 60, FMin: 34})};
+
+  /*@media ${Theme.media.desktop}{
+    text-align: center;
+  }*/
 `
 
 const MainTitle = styled.h1`
@@ -142,6 +172,10 @@ const Desc = styled.p`
   max-width: 410px;
   width: 100%;
   margin-bottom: 45px;
+
+  /*@media ${Theme.media.desktop}{
+    margin-bottom: 30px;
+  }*/
 `
 
 

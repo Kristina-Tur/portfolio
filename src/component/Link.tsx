@@ -4,10 +4,7 @@ import {font} from '../styles/Common';
 
 
 export const Link = styled.a`
-  ${font({color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 20, FMin: 14})};
-  color: ${Theme.colors.text.primary};
-  font-size: 20px;
-  font-weight: 600;
+  ${font({color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 20, FMin: 18})};
   border-radius: 83px;
   background-image: ${Theme.colors.accent};
   padding: 12px 45px;
