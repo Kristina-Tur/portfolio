@@ -8,9 +8,10 @@ import {Theme} from '../../../styles/Theme';
 import location from './../../../assets/images/svg/location.svg'
 import tel from './../../../assets/images/svg/telephone.svg'
 import email from './../../../assets/images/svg/email.svg'
-import ins from './../../../assets/images/svg/instagram.svg'
-import {Social} from '../../../component/social/Social';
 import {font} from '../../../styles/Common';
+import {Instagram} from './components/socialContacts/Instagram';
+import {Telegram} from './components/socialContacts/Telegram';
+import {Linkedin} from './components/socialContacts/Linkedin';
 
 export const Contacts = () => {
     return (
@@ -29,24 +30,32 @@ export const Contacts = () => {
                                 <Button type={'submit'}>{'Send'}</Button>
                             </StyledForm>
                         </WrapperForm>
-                        <FlexWrapper flexDirection={'column'} justifyContent={'center'} rowGap={'50px'}>
-                            <WrapperContact>
+                        <WrapperContact>
                             <Contact src={location} title={'Location'} text={'Brest/Belarus'}/>
                             <Contact src={tel} title={'Phone'} text={'+375292400937'}/>
                             <Contact src={email} title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
-                            </WrapperContact>
-                        </FlexWrapper>
+                        </WrapperContact>
                     </Wrapper>
                     <SocialList>
-                        <Social iconId={'instagram'} width={'30'} height={'30'} viewBox={'0 0 24 24'}/>
-                        <Social iconId={'telegram'} width={'30'} height={'30'} viewBox={'0 5 45 45'}/>
-                        <Social iconId={'linkedin'} width={'30'} height={'30'} viewBox={'0 0 24 24'}/>
+                        <WrapperInstagramLink>
+                            <Instagram/>
+                        </WrapperInstagramLink>
+                        <a href={''}>
+                            <Telegram/>
+                        </a>
+                        <a>
+                            <Linkedin/>
+                        </a>
                     </SocialList>
                 </FlexWrapper>
             </Container>
         </StyledContacts>
     );
 };
+
+const WrapperInstagramLink = styled.a`
+
+`
 
 const StyledContacts = styled.section`
 `
@@ -61,20 +70,26 @@ const Wrapper = styled.div`
   padding: 55px 55px;
   margin-bottom: 65px;
 
-  @media ${Theme.media.tablet}{
+  @media ${Theme.media.tablet} {
     max-width: 590px;
     flex-direction: column;
+    margin-top: -20px;
+  }
+
+  @media ${Theme.media.mobile} {
+    padding: 30px 30px;
+    border-radius: 50px;
   }
 `
 
 const WrapperForm = styled.div`
-  @media ${Theme.media.tablet}{
+  @media ${Theme.media.tablet} {
     margin-bottom: 50px;
   }
 `
 
 const Text = styled.p`
-  ${font({color: Theme.colors.text.secondary, FMax: 36, FMin: 20, weight: 500})};
+  ${font({color: Theme.colors.text.secondary, FMax: 36, FMin: 25, weight: 500})};
   margin-bottom: 25px;
 `
 
@@ -88,6 +103,10 @@ const StyledForm = styled.form`
   textarea {
     resize: none;
     height: 140px;
+  }
+
+  @media ${Theme.media.mobile}{
+    min-width: 250px
   }
 `
 
@@ -113,12 +132,17 @@ const Button = styled.button`
 `
 
 const WrapperContact = styled.div`
-  @media ${Theme.media.tablet}{
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 50px;
+  
+  @media ${Theme.media.tablet} {
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     column-gap: 80px;
-    row-gap: 50px;
+    row-gap: 40px;
   }
 `
 

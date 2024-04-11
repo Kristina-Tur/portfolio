@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Theme} from '../../../styles/Theme';
+import {font} from '../../../styles/Common';
 
 type ContactPropsType = {
     src: string
@@ -27,14 +28,10 @@ const Image = styled.img`
 
 `
 const Title = styled.h4`
-  color: ${Theme.colors.text.secondary};
-  font-size: 22px;
-  font-weight: 500;
+  ${font({color: Theme.colors.text.secondary, FMax: 22, FMin: 18, weight: 500})};
   margin-bottom: 3px;
 `
 const Text = styled.p`
-  color: ${Theme.colors.text.secondary};
-  font-size: 18px;
-  font-weight: 400;
+  ${font({color: Theme.colors.text.secondary, FMax: 18, FMin: 16, weight: 400})};
 `
 

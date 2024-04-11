@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Theme} from '../../../../styles/Theme';
-import {Dots} from '../components/Dots';
+import {Dots} from './components/Dots';
 import {font} from '../../../../styles/Common';
 
 export const TabMenu = (props: { menuItems: Array<string> }) => {

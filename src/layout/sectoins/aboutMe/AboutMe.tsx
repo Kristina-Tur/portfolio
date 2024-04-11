@@ -6,7 +6,7 @@ import backgroundImagePng from './../../../assets/images/map.png'
 import {Link} from '../../../component/Link';
 import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
-import {Social} from '../../../component/social/Social';
+import {Social} from './components/Social';
 import {font} from '../../../styles/Common';
 
 export const AboutMe = () => {
