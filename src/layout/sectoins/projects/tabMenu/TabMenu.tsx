@@ -12,9 +12,9 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
             </DotsWrapper>
             <ul role={'menu'}>
                 {props.menuItems.map((item, index) => {
-                    return <List key={index} role={'menuItem'}>
+                    return <li key={index} role={'menuItem'}>
                         <Link href="#">{item}</Link>
-                    </List>
+                    </li>
                 })}
             </ul>
         </StyledNav>
@@ -48,29 +48,9 @@ const DotsWrapper = styled.div`
   }
 `
 
-const List = styled.li`
-
-  @media ${Theme.media.mobile}{
-/*    max-width: 200px;
-    width: 100%;
-    min-height: 30px;
-  }
-  max-width: 100px;
-  width: 100%;
-  min-height: 30px;
-  
-  border-radius: 70px;
-  border: 2px solid ${Theme.colors.neutral};
-  text-align: center;*/
-
-  &:hover{
-    background-color: ${Theme.colors.neutral};
-  }
-`
-
 const Link = styled.a`
   background-color: ${Theme.colors.primaryBg};
-  ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 18, weight: 400, lineHeight: 1.7})};
+  ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 16, weight: 400, lineHeight: 1.7})};
   text-transform: uppercase;
   border-bottom: 1px solid ${Theme.colors.text.accent};
   border-radius: 83px;
