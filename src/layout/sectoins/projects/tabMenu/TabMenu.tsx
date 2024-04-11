@@ -12,9 +12,9 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
             </DotsWrapper>
             <ul role={'menu'}>
                 {props.menuItems.map((item, index) => {
-                    return <li key={index} role={'menuItem'}>
+                    return <List key={index} role={'menuItem'}>
                         <Link href="#">{item}</Link>
-                    </li>
+                    </List>
                 })}
             </ul>
         </StyledNav>
@@ -35,14 +35,12 @@ const StyledNav = styled.nav`
       align-items: center;
     }
   }
-
-  
 `
 
 const DotsWrapper = styled.div`
   position: absolute;
   z-index: -1;
-  top: -85px;
+  top: -35px;
   left: 20px;
 
   @media ${Theme.media.mobile}{
@@ -50,20 +48,25 @@ const DotsWrapper = styled.div`
   }
 `
 
-const Link = styled.a`
-  ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 18, weight: 400})};
+const List = styled.li`
+  max-width: 200px;
+  width: 100%;
+  min-height: 30px;
   background-color: ${Theme.colors.primaryBg};
   border-radius: 70px;
   border: 2px solid ${Theme.colors.neutral};
-  padding: 5px 40px;
-  
-  /*max-width: 110px;
-  min-height: 30px;
-  width: 100%;*/
-  
-  
+  text-align: center;
+
   &:hover{
     background-color: ${Theme.colors.neutral};
+  }
+`
+
+const Link = styled.a`
+  ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 18, weight: 400, lineHeight: 1.7})};
+  padding: 5px 88px;
+
+  &:hover{
     color: ${Theme.colors.text.secondary};
   }
 `

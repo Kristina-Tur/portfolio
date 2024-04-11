@@ -17,7 +17,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <TabMenu menuItems={projectsItems}/>
-                <FlexWrapper flexWrap={'wrap'} justifyContent={'space-around'} rowGap={'70px'} columnGap={'50px'}>
+                <FlexWrapper flexWrap={'wrap'} justifyContent={'space-around'} rowGap={'70px'} columnGap={'20px'}>
                     <Project src={projectPng} srcSet={projectWebp} title={'Project'}
                              text={'Application that can help you in learning by flashcards'}/>
                     <Project src={projectPng} srcSet={projectWebp} title={'Project'}

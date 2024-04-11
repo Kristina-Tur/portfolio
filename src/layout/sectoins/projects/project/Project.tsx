@@ -22,7 +22,7 @@ export const Project = (props: ProjectPropsTitle) => {
             </picture>
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
-            <FlexWrapper justifyContent={'space-around'}>
+            <FlexWrapper justifyContent={'space-around'} flexWrap={'wrap'} rowGap={'20px'}>
                 <Link href={'#'}>View project</Link>
                 <Link href={'#'}>Code</Link>
             </FlexWrapper>
@@ -42,6 +42,11 @@ const StyledProject = styled.div`
   box-shadow: 0 8px 32px 0 ${Theme.colors.border.projectBoxShadow};
 
   position: relative;
+
+  @media ${Theme.media.mobile}{
+    max-width: 200px;
+    min-height: 440px;
+  }
 `
 
 const Title = styled.h3`
@@ -55,18 +60,30 @@ const Title = styled.h3`
   left: 50%;
   transform: translate(-50%, -200%);
   transform-origin: top left;
+
+  @media ${Theme.media.mobile}{
+    top: 42%;
+  }
 `
 
 const Image = styled.img`
   width: 100%;
   border-radius: 26px 26px 0 0;
   margin-bottom: 40px;
+
+  @media ${Theme.media.mobile}{
+    margin-bottom: 25px;
+  }
 `
 
 const Text = styled.p`
   ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 18, weight: 700})};
   padding: 0 10px;
   margin-bottom: 35px;
+
+  @media ${Theme.media.mobile}{
+    margin-bottom: 20px;
+  }
 `
 
 const Link = styled.a`

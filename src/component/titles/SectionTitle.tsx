@@ -7,10 +7,8 @@ type SectionTitlePropsType = {
 }
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
-  /*${font({FMax: 32, FMin: 25, })}*/
+  ${font({FMax: 32, FMin: 25})}
   color: ${props => props.color || Theme.colors.text.primary} ;
-  font-weight: 600;
-  font-size: calc( (100vw - 576px)/(1280 - 576) * (32 - 25) + 25px);
   text-align: center;
   margin-bottom: 70px;
 
@@ -19,14 +17,22 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   &::before{
     content: '';
     display: inline-block;
-    width: 120px;
-    height: 3px;
-    background-color: ${Theme.colors.text.accent};
-    border-radius: 4px;
+    /*width: 120px;
+    height: 3px;*/
+    width: 18px;
+    height: 18px;
+    background-color: #945DD6/*${Theme.colors.text.accent}*/;
+    /*border-radius: 4px;*/
+    border-radius: 50%;
+    opacity: 0.5;
 
     position: absolute;
     left: 50%;
-    bottom: -10px;
+    bottom: -23px;
     transform: translateX(-50%);
+  }
+
+  @media ${Theme.media.mobile}{
+    margin-top: -20px;
   }
 `
