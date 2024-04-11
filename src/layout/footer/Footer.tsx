@@ -14,11 +14,13 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
 background-color: ${Theme.colors.primaryBg};
 `
-const Copyright = styled.p`
+const Copyright = styled.small`
+  display: block;
   color: ${Theme.colors.text.primary};
   font-size: 12px;
   font-weight: 400;
   border-top: 1px solid ${Theme.colors.neutral};
+ /* min-height: 52px;*/
   padding: 20px 0;
   text-align: center;
 `

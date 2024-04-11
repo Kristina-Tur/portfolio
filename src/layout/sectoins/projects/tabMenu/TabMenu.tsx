@@ -51,17 +51,17 @@ const DotsWrapper = styled.div`
 const List = styled.li`
 
   @media ${Theme.media.mobile}{
-    max-width: 200px;
+/*    max-width: 200px;
     width: 100%;
     min-height: 30px;
   }
   max-width: 100px;
   width: 100%;
   min-height: 30px;
-  background-color: ${Theme.colors.primaryBg};
+  
   border-radius: 70px;
   border: 2px solid ${Theme.colors.neutral};
-  text-align: center;
+  text-align: center;*/
 
   &:hover{
     background-color: ${Theme.colors.neutral};
@@ -69,11 +69,16 @@ const List = styled.li`
 `
 
 const Link = styled.a`
+  background-color: ${Theme.colors.primaryBg};
   ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 18, weight: 400, lineHeight: 1.7})};
-  padding: 5px 88px;
+  text-transform: uppercase;
+  border-bottom: 1px solid ${Theme.colors.text.accent};
+  border-radius: 83px;
+  padding: 5px 25px;
 
-  &:hover{
-    color: ${Theme.colors.text.secondary};
+  &:hover {
+    background-image: ${Theme.colors.accent};
+    border-bottom: none;
   }
 `
 

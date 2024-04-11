@@ -8,7 +8,7 @@ import projectPng from './../../../assets/images/project.png'
 import projectWebp from './../../../assets/images/project.webp'
 import {Container} from '../../../component/Container';
 
-const projectsItems = ['All', '1', '2']
+const projectsItems = ['All', 'landing page', 'React', 'spa']
 export const Projects = () => {
     return (
         <StyledProjects>
