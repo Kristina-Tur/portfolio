@@ -10,6 +10,7 @@ import tel from './../../../assets/images/svg/telephone.svg'
 import email from './../../../assets/images/svg/email.svg'
 import ins from './../../../assets/images/svg/instagram.svg'
 import {Social} from '../../../component/social/Social';
+import {font} from '../../../styles/Common';
 
 export const Contacts = () => {
     return (
@@ -18,7 +19,7 @@ export const Contacts = () => {
                 <SectionTitle>Contacts</SectionTitle>
                 <FlexWrapper flexDirection={'column'} alignItems={'center'}>
                     <Wrapper>
-                        <div>
+                        <WrapperForm>
                             <Text>Get in touch with me</Text>
                             <StyledForm>
                                 <Field placeholder={'Name'}/>
@@ -27,11 +28,13 @@ export const Contacts = () => {
                                 <Field as={'textarea'} placeholder={'Massage'}/>
                                 <Button type={'submit'}>{'Send'}</Button>
                             </StyledForm>
-                        </div>
+                        </WrapperForm>
                         <FlexWrapper flexDirection={'column'} justifyContent={'center'} rowGap={'50px'}>
+                            <WrapperContact>
                             <Contact src={location} title={'Location'} text={'Brest/Belarus'}/>
                             <Contact src={tel} title={'Phone'} text={'+375292400937'}/>
                             <Contact src={email} title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
+                            </WrapperContact>
                         </FlexWrapper>
                     </Wrapper>
                     <SocialList>
@@ -57,11 +60,21 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 55px 55px;
   margin-bottom: 65px;
+
+  @media ${Theme.media.tablet}{
+    max-width: 590px;
+    flex-direction: column;
+  }
 `
+
+const WrapperForm = styled.div`
+  @media ${Theme.media.tablet}{
+    margin-bottom: 50px;
+  }
+`
+
 const Text = styled.p`
-  color: ${Theme.colors.text.secondary};
-  font-size: 36px;
-  font-weight: 500;
+  ${font({color: Theme.colors.text.secondary, FMax: 36, FMin: 20, weight: 500})};
   margin-bottom: 25px;
 `
 
@@ -79,14 +92,12 @@ const StyledForm = styled.form`
 `
 
 const Field = styled.input`
+  ${font({color: Theme.colors.text.secondary, FMax: 18, FMin: 18, weight: 400})};
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
   border-radius: 20px;
   background-color: ${Theme.colors.neutral};
   padding: 18px 20px;
   border: none;
-  color: ${Theme.colors.text.secondary};
 
   &:focus-visible {
     outline: 1px solid ${Theme.colors.text.neutral};
@@ -94,13 +105,21 @@ const Field = styled.input`
 `
 
 const Button = styled.button`
-  color: ${Theme.colors.text.primary};
-  font-size: 20px;
-  font-weight: 600;
+  ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 20})};
   border-radius: 83px;
   background-image: ${Theme.colors.accent};
   padding: 15px 65px;
   cursor: pointer;
+`
+
+const WrapperContact = styled.div`
+  @media ${Theme.media.tablet}{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 50px;
+  }
 `
 
 const SocialList = styled.ul`
