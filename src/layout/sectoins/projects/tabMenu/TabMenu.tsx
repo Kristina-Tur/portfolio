@@ -49,7 +49,13 @@ const DotsWrapper = styled.div`
 `
 
 const List = styled.li`
-  max-width: 200px;
+
+  @media ${Theme.media.mobile}{
+    max-width: 200px;
+    width: 100%;
+    min-height: 30px;
+  }
+  max-width: 100px;
   width: 100%;
   min-height: 30px;
   background-color: ${Theme.colors.primaryBg};

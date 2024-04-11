@@ -14,6 +14,8 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
                 <SectionTitle color={`${Theme.colors.text.secondary}`}>About me</SectionTitle>
+                <Wrapper1>
+                <BlurWrapper></BlurWrapper>
                 <Wrapper>
                     <WrapperIconList>
                         <Social iconId={'instagramGray'} width={'28'} height={'28'} viewBox={'0 0 24 24'}/>
@@ -33,6 +35,7 @@ export const AboutMe = () => {
                     </WrapperList>
                     <Link>Download CV</Link>
                 </Wrapper>
+                </Wrapper1>
             </Container>
         </StyledAboutMe>
     );
@@ -44,16 +47,49 @@ const StyledAboutMe = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+  
+`
+
+const Wrapper1 = styled.div`
+  position: relative;
+  z-index: 0;
+
+  @media ${Theme.media.tablet}{
+    display: flex;
+    justify-content: center;
+  }
+`
+
+const BlurWrapper = styled.div`
+  max-width: 560px;
+  width: 100%;
+  min-height: 562px;
+  border-radius: 100px 0;
+  border: 2px solid ${Theme.colors.secondary};
+  background-image: linear-gradient(147deg, rgba(255, 255, 255, 0.50) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
+  backdrop-filter: blur(10px);
+
+  position: absolute;
+  z-index: -1;
+
+  @media ${Theme.media.tablet}{
+    max-width: 490px;
+    min-height: 490px;
+  }
 `
 
 const Wrapper = styled.div`
   max-width: 560px;
   width: 100%;
   border-radius: 100px 0;
-  border: 2px solid ${Theme.colors.secondary};
+  /*border: 2px solid ${Theme.colors.secondary};
   background-image: linear-gradient(147deg, rgba(255, 255, 255, 0.50) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);*/
   padding: 30px 40px 65px;
+  @media ${Theme.media.tablet}{
+    max-width: 490px;
+  }
+ 
 `
 
 const WrapperIconList = styled.ul`
@@ -73,9 +109,7 @@ const WrapperList = styled.ul`
 `
 
 const ListItem = styled.li`
-  color: ${Theme.colors.text.secondary};
-  font-size: 20px;
-  font-weight: 400;
+  ${font({weight: 400, color: Theme.colors.text.secondary, FMax: 20, FMin: 16})};
   padding-left: 15px;
   margin-bottom: 10px;
 `
