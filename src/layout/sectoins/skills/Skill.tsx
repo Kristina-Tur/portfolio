@@ -24,13 +24,18 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  width: 160px;
+  max-width: 160px;
+  width: 100%;
   height: 85px;
   border-radius: 24px;
   background-color: ${Theme.colors.neutral};
   box-shadow: 0 3px 10px ${Theme.colors.text.secondary};
 
   position: relative;
+  
+  @media ${Theme.media.mobile}{
+    margin-top: -20px;
+  }
 `
 
 const IconWrapper = styled.div`
@@ -50,6 +55,11 @@ const IconWrapper = styled.div`
     left: -8px;
     z-index: -1;
   }
+
+  /*@media ${Theme.media.mobile}{
+    width: 65px;
+    height: 65px;
+  }*/
 `
 
 const SkillTitle = styled.p`
