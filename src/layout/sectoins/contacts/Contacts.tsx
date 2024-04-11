@@ -36,26 +36,22 @@ export const Contacts = () => {
                             <Contact src={email} title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
                         </WrapperContact>
                     </Wrapper>
-                    <SocialList>
-                        <WrapperInstagramLink>
+                    <FlexWrapper justifyContent={'center'} columnGap={'30px'}>
+                        <a href={''}>
                             <Instagram/>
-                        </WrapperInstagramLink>
+                        </a>
                         <a href={''}>
                             <Telegram/>
                         </a>
-                        <a>
+                        <a href={''}>
                             <Linkedin/>
                         </a>
-                    </SocialList>
+                    </FlexWrapper>
                 </FlexWrapper>
             </Container>
         </StyledContacts>
     );
 };
-
-const WrapperInstagramLink = styled.a`
-
-`
 
 const StyledContacts = styled.section`
 `
@@ -145,12 +141,3 @@ const WrapperContact = styled.div`
     row-gap: 40px;
   }
 `
-
-const SocialList = styled.ul`
-  display: flex;
-  justify-content: center;
-  column-gap: 15px;
-`
-
-
-
