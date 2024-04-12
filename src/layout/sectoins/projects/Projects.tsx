@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {SectionTitle} from '../../../component/titles/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
 import {TabMenu} from './tabMenu/TabMenu';
@@ -9,33 +8,61 @@ import projectWebp from './../../../assets/images/project.webp'
 import {Container} from '../../../component/Container';
 
 const projectsItems = ['All', 'landing page', 'React', 'spa']
-export const Projects = () => {
+
+const projectData = [
+    {
+        src: projectPng,
+        srcSet: projectWebp,
+        title: 'Project',
+        text: 'Application that can help you in learning by flashcards'
+    },
+    {
+        src: projectPng,
+        srcSet: projectWebp,
+        title: 'Project',
+        text: 'Application that can help you in learning by flashcards'
+    },
+    {
+        src: projectPng,
+        srcSet: projectWebp,
+        title: 'Project',
+        text: 'Application that can help you in learning by flashcards'
+    },
+    {
+        src: projectPng,
+        srcSet: projectWebp,
+        title: 'Project',
+        text: 'Application that can help you in learning by flashcards'
+    },
+    {
+        src: projectPng,
+        srcSet: projectWebp,
+        title: 'Project',
+        text: 'Application that can help you in learning by flashcards'
+    },
+    {
+        src: projectPng,
+        srcSet: projectWebp,
+        title: 'Project',
+        text: 'Application that can help you in learning by flashcards'
+    },
+
+]
+export const Projects: React.FC = () => {
     return (
-        <StyledProjects>
+        <section>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <TabMenu menuItems={projectsItems}/>
                 <FlexWrapper flexWrap={'wrap'} justifyContent={'space-around'} rowGap={'70px'} columnGap={'20px'}>
-                    <Project src={projectPng} srcSet={projectWebp} title={'Project'}
-                             text={'Application that can help you in learning by flashcards'}/>
-                    <Project src={projectPng} srcSet={projectWebp} title={'Project'}
-                             text={'Application that can help you in learning by flashcards'}/>
-                    <Project src={projectPng} srcSet={projectWebp} title={'Project'}
-                             text={'Application that can help you in learning by flashcards'}/>
-                    <Project src={projectPng} srcSet={projectWebp} title={'Project'}
-                             text={'Application that can help you in learning by flashcards'}/>
-                    <Project src={projectPng} srcSet={projectWebp} title={'Project'}
-                             text={'Application that can help you in learning by flashcards'}/>
-                    <Project src={projectPng} srcSet={projectWebp} title={'Project'}
-                             text={'Application that can help you in learning by flashcards'}/>
-
+                    {projectData.map((p, index) => {
+                        return <Project key={index} src={p.src} srcSet={p.srcSet} title={p.title}
+                                 text={p.text}/>
+                    })}
                 </FlexWrapper>
             </Container>
-        </StyledProjects>
+        </section>
     );
 };
 
-const StyledProjects = styled.section`
-  
-`
 
