@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Dots = () => {
+export const Dots: React.FC = () => {
     return (
         <svg width="413" height="505" viewBox="0 0 413 505" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.3">

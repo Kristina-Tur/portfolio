@@ -7,7 +7,7 @@ type SocialPropsType = {
     width?: string
     viewBox?: string
 }
-export const Social = (props: SocialPropsType) => {
+export const Social:React.FC<SocialPropsType> = (props: SocialPropsType) => {
     return (
             <li>
                 <a href="">
