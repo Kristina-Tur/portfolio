@@ -1,29 +1,8 @@
-import React from 'react';
-import {Icon} from '../../../component/icon/icon';
 import styled from 'styled-components';
 import {Theme} from '../../../styles/Theme';
 import {font} from '../../../styles/Common';
 
-type SkillPropsType = {
-    iconId: string
-    title: string
-    width?: string
-    height?: string
-    viewBox?: string
-}
-
-export const Skill = (props: SkillPropsType) => {
-    return (
-        <StyledSkill>
-            <IconWrapper>
-                <Icon iconId={props.iconId} viewBox={props.viewBox}/>
-            </IconWrapper>
-            <SkillTitle>{props.title}</SkillTitle>
-        </StyledSkill>
-    );
-};
-
-const StyledSkill = styled.div`
+const Skill = styled.div`
   max-width: 160px;
   width: 100%;
   height: 85px;
@@ -54,15 +33,16 @@ const IconWrapper = styled.div`
     top: -8px;
     left: -8px;
     z-index: -1;
-  }
-
-  /*@media ${Theme.media.mobile}{
-    width: 65px;
-    height: 65px;
-  }*/
+}
 `
 
 const SkillTitle = styled.p`
   ${font({color: Theme.colors.text.secondary,FMax: 20, FMin: 20, lineHeight: 5.5})}
   text-align: center;
 `
+
+export const S = {
+    Skill,
+    IconWrapper,
+    SkillTitle
+}
