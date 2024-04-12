@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from '../../component/Link';
 import {Theme} from '../../styles/Theme';
 
 export const Footer = () => {
@@ -20,7 +19,6 @@ const Copyright = styled.small`
   font-size: 12px;
   font-weight: 400;
   border-top: 1px solid ${Theme.colors.neutral};
- /* min-height: 52px;*/
   padding: 20px 0;
   text-align: center;
 `
