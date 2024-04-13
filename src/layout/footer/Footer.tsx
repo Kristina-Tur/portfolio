@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Theme} from '../../styles/Theme';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
         <StyledFooter>
             <Copyright>© 2024 All Rights Reserved.</Copyright>
