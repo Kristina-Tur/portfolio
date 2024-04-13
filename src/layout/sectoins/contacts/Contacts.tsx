@@ -9,9 +9,8 @@ import location from './../../../assets/images/svg/location.svg'
 import tel from './../../../assets/images/svg/telephone.svg'
 import email from './../../../assets/images/svg/email.svg'
 import {font} from '../../../styles/Common';
-import {Instagram} from './components/socialContacts/Instagram';
-import {Telegram} from './components/socialContacts/Telegram';
-import {Linkedin} from './components/socialContacts/Linkedin';
+import {Data} from './components/socialContacts/Data';
+import {SocialContacts} from './components/socialContacts/SocialContacts';
 
 export const Contacts = () => {
     return (
@@ -36,17 +35,11 @@ export const Contacts = () => {
                             <Contact src={email} title={'Email'} text={'kristina.tur06121955@gmail.com'}/>
                         </WrapperContact>
                     </Wrapper>
-                    <FlexWrapper justifyContent={'center'} columnGap={'30px'}>
-                        <a href={''}>
-                            <Instagram/>
-                        </a>
-                        <a href={''}>
-                            <Telegram/>
-                        </a>
-                        <a href={''}>
-                            <Linkedin/>
-                        </a>
-                    </FlexWrapper>
+                    <WrapperSocialContacts>
+                        {Data.map((d, index) => {
+                            return <SocialContacts key={index} iconId={d.iconId}/>
+                        })}
+                    </WrapperSocialContacts>
                 </FlexWrapper>
             </Container>
         </StyledContacts>
@@ -140,4 +133,10 @@ const WrapperContact = styled.div`
     column-gap: 80px;
     row-gap: 40px;
   }
+`
+
+const WrapperSocialContacts = styled.ul`
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
 `
