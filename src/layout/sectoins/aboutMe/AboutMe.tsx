@@ -29,7 +29,7 @@ const socialData = [
 ]
 export const AboutMe: React.FC = () => {
     return (
-        <S.AboutMe>
+        <S.AboutMe id={'about'}>
             <Container>
                 <SectionTitle color={`${Theme.colors.text.secondary}`}>About me</SectionTitle>
                 <S.Wrapper>

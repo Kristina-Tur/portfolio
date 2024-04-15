@@ -31,7 +31,7 @@ const DataContacts = [
 ]
 export const Contacts: React.FC = () => {
     return (
-        <section>
+        <section id={'contacts'}>
             <Container>
                 <SectionTitle>Contacts</SectionTitle>
                 <FlexWrapper flexDirection={'column'} alignItems={'center'}>

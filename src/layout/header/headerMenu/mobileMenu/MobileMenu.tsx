@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Menu} from '../menu/Menu';
 import {S} from '../HeaderMenu_styles'
+import {TabsStatusType} from '../../../sectoins/projects/tabMenu/TabMenu';
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+export const MobileMenu: React.FC<{ menuItems: Array<{title: string, href: string}> }> = (props: { menuItems: Array<{title: string, href: string}> }) => {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {

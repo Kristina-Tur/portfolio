@@ -92,7 +92,7 @@ export const Projects: React.FC = () => {
     }
 
     return (
-        <section>
+        <section id={'projects'}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <TabMenu menuItems={projectsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>

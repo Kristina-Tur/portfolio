@@ -6,7 +6,27 @@ import {MobileMenu} from './headerMenu/mobileMenu/MobileMenu';
 import {S} from './Header_Styles'
 
 // rsc
-const headerItems = ['Home', 'Projects', 'About', 'Contacts']
+/*const headerItems = [, 'Projects', 'About', 'Contacts']*/
+
+const headerItems = [
+    {
+        title: 'Home',
+        href: 'home'
+    },
+    {
+        title: 'Projects',
+        href: 'projects'
+    },
+    {
+        title: 'About',
+        href: 'about'
+    },
+    {
+        title: 'Contacts',
+        href: 'contacts'
+    },
+
+]
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
