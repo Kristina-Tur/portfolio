@@ -30,7 +30,7 @@ const Title = styled.h3`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -200%);
+  transform: translate(-50%, -80%);
   transform-origin: top left;
 
   @media ${Theme.media.mobile}{

@@ -45,10 +45,10 @@ const ContentWrapper = styled.div`
   width: 100%;
   border-radius: 100px 0;
   padding: 30px 40px 65px;
+  
   @media ${Theme.media.tablet}{
     max-width: 490px;
   }
- 
 `
 
 const WrapperIconList = styled.ul`
