@@ -2,7 +2,15 @@ import React from 'react';
 import {Dots} from './components/Dots';
 import {S} from './TabMenu_Styles'
 
-export const TabMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+export type TabsStatusType = 'all' | 'landing' | 'react' | 'spa'
+
+export type TabMenuPropsType = {
+    menuItems: Array<{status: TabsStatusType, title: string}>,
+    changeFilterStatus: (value: TabsStatusType) => void,
+    currentFilterStatus: string
+}
+
+export const TabMenu: React.FC<TabMenuPropsType> = (props: TabMenuPropsType) => {
     return (
         <S.Nav>
             <S.DotsWrapper>
@@ -11,7 +19,7 @@ export const TabMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuIte
             <ul role={'menu'}>
                 {props.menuItems.map((item, index) => {
                     return <li key={index} role={'menuItem'}>
-                        <S.Link href="#">{item}</S.Link>
+                        <S.Link active={props.currentFilterStatus === item.status} as={'button'} onClick={() => {props.changeFilterStatus(item.status)}}>{item.title}</S.Link>
                     </li>
                 })}
             </ul>

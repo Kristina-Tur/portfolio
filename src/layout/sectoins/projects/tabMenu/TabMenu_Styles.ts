@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Theme} from '../../../../styles/Theme';
 import {font} from '../../../../styles/Common';
 
@@ -29,18 +29,23 @@ const DotsWrapper = styled.div`
   }
 `
 
-const Link = styled.a`
+const Link = styled.a<{active: boolean}>`
   background-color: ${Theme.colors.primaryBg};
   ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 16, weight: 400, lineHeight: 1.7})};
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-bottom: 1px solid ${Theme.colors.text.accent};
   border-radius: 83px;
-  padding: 5px 25px;
+  padding: 0 25px;
 
   &:hover {
     background-image: ${Theme.colors.accent};
     border-bottom: none;
   }
+  
+  ${props => props.active && css<{active: boolean}>`
+    background-image: ${Theme.colors.accent};
+    border-bottom: none;
+  `}
 `
 
 export const S = {
