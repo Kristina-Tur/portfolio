@@ -117,6 +117,10 @@ const NameTitle = styled.h2`
 const MainTitle = styled.h1`
   ${font({color: Theme.colors.text.accent, letter: '1px', FMax: 30, FMin: 20})};
   margin: 15px 0 18px;
+  
+  p{
+    display: none;
+  }
 `
 
 const Desc = styled.p`

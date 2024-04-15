@@ -1,5 +1,5 @@
 import {Theme} from '../../../styles/Theme';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {font} from '../../../styles/Common';
 
 const Project = styled.div`
@@ -58,7 +58,7 @@ const Text = styled.p`
   }
 `
 
-const Link = styled.a`
+const Link = styled.a<{active?: boolean}>`
   ${font({color: Theme.colors.text.primary, FMax: 18, FMin: 18})};
   border-bottom: 1px solid ${Theme.colors.text.accent};
   border-radius: 83px;
@@ -68,6 +68,11 @@ const Link = styled.a`
     background-image: ${Theme.colors.accent};
     border-bottom: none;
   }
+
+  ${props => props.active && css<{active?: boolean}>`
+    background-image: ${Theme.colors.accent};
+    border-bottom: none;
+  `}
 `
 
 export const S = {
