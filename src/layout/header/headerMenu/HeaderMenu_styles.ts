@@ -129,7 +129,7 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
   right: 0;
   bottom: 0;
   background-color: ${Theme.colors.primaryBg};
-  opacity: 0.9;
+  opacity: 0.95;
   display: none;
   
   ${props => props.isOpen && css<{isOpen: boolean}>`
