@@ -8,6 +8,8 @@ const Main = styled.section`
   min-height: 80vh;
   display: flex;
   align-items: center;
+  
+  position: relative; //for animation of Particles
 `
 
 const Wrapper = styled.div`

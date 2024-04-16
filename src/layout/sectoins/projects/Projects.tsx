@@ -7,6 +7,7 @@ import projectPng from './../../../assets/images/project.png'
 import projectWebp from './../../../assets/images/project.webp'
 import {Container} from '../../../component/Container';
 import {AnimatePresence, motion} from 'framer-motion';
+import styled from 'styled-components';
 
 export const projectsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
@@ -99,7 +100,7 @@ export const Projects: React.FC = () => {
     }
 
     return (
-        <section id={'projects'}>
+        <StyledProjects id={'projects'}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <TabMenu menuItems={projectsItems} changeFilterStatus={changeFilterStatus}
@@ -127,8 +128,11 @@ export const Projects: React.FC = () => {
 
                 </FlexWrapper>
             </Container>
-        </section>
+        </StyledProjects>
     );
 };
 
+const StyledProjects = styled.section`
+  position: relative; //for animation of Particles
+`
 

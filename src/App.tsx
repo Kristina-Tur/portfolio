@@ -8,17 +8,19 @@ import React from 'react';
 import {AboutMe} from './layout/sectoins/aboutMe/AboutMe';
 import {Contacts} from './layout/sectoins/contacts/Contacts';
 import {Footer} from './layout/footer/Footer';
+import {Particle} from './component/particle/Particles';
 
 
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             <Main/>
             <Skills/>
             <Projects/>
             <AboutMe/>
-           <Contacts/>
+            <Contacts/>
             <Footer/>
         </div>
     );

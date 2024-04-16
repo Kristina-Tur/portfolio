@@ -10,6 +10,8 @@ const AboutMe = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+
+  position: relative; //for animation of Particles
 `
 
 const Wrapper = styled.div`

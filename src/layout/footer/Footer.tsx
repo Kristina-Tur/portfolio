@@ -11,7 +11,9 @@ export const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
-background-color: ${Theme.colors.primaryBg};
+  background-color: ${Theme.colors.primaryBg};
+
+  position: relative; //for animation of Particles
 `
 const Copyright = styled.small`
   display: block;

@@ -9,6 +9,7 @@ import email from './../../../assets/images/svg/email.svg'
 import {DataSocialContacts} from './components/socialContacts/DataSocialContacts';
 import {SocialContacts} from './components/socialContacts/SocialContacts';
 import {S} from './Contacts_Styles'
+import styled from 'styled-components';
 
 
 const DataContacts = [
@@ -31,7 +32,7 @@ const DataContacts = [
 ]
 export const Contacts: React.FC = () => {
     return (
-        <section id={'contacts'}>
+        <StyledContacts id={'contacts'}>
             <Container>
                 <SectionTitle>Contacts</SectionTitle>
                 <FlexWrapper flexDirection={'column'} alignItems={'center'}>
@@ -59,7 +60,10 @@ export const Contacts: React.FC = () => {
                     </S.WrapperSocialContacts>
                 </FlexWrapper>
             </Container>
-        </section>
+        </StyledContacts>
     );
 };
 
+const StyledContacts = styled.section`
+  position: relative; //for animation of Particles
+`

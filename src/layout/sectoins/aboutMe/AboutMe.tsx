@@ -5,6 +5,7 @@ import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
 import {Social} from './components/Social';
 import {S} from './AboutMe_Styles'
+import {Fade} from 'react-awesome-reveal';
 
 const socialData = [
     {
@@ -32,28 +33,32 @@ export const AboutMe: React.FC = () => {
         <S.AboutMe id={'about'}>
             <Container>
                 <SectionTitle color={`${Theme.colors.text.secondary}`}>About me</SectionTitle>
-                <S.Wrapper>
-                <S.BlurWrapper></S.BlurWrapper>
-                <S.ContentWrapper>
-                    <S.WrapperIconList>
-                        {socialData.map((s, index) => {
-                            return <Social key={index} iconId={s.iconId} width={s.width} height={s.height} viewBox={s.viewBox}/>
-                        })}
-                    </S.WrapperIconList>
-                    <S.NameTitle>I’m Kristina Tur</S.NameTitle>
-                    <S.WrapperList>
-                        <S.ListItem>28 years old</S.ListItem>
-                        <S.ListItem>Higher technological education in the field of garment production</S.ListItem>
-                        <S.ListItem>Started to get interested in programming in 2023</S.ListItem>
-                        <S.ListItem>I’am coding with a clean and beautiful problem
-                            solving in mind.
-                        </S.ListItem>
-                        <S.ListItem>Languages: English, Russian</S.ListItem>
-                        <S.ListItem>I live in Brest, Belarus</S.ListItem>
-                    </S.WrapperList>
-                    <Link>Download CV</Link>
-                </S.ContentWrapper>
-                </S.Wrapper>
+                <Fade>
+                    <S.Wrapper>
+                        <S.BlurWrapper></S.BlurWrapper>
+                        <S.ContentWrapper>
+                            <S.WrapperIconList>
+                                {socialData.map((s, index) => {
+                                    return <Social key={index} iconId={s.iconId} width={s.width} height={s.height}
+                                                   viewBox={s.viewBox}/>
+                                })}
+                            </S.WrapperIconList>
+                            <S.NameTitle>I’m Kristina Tur</S.NameTitle>
+                            <S.WrapperList>
+                                <S.ListItem>28 years old</S.ListItem>
+                                <S.ListItem>Higher technological education in the field of garment
+                                    production</S.ListItem>
+                                <S.ListItem>Started to get interested in programming in 2023</S.ListItem>
+                                <S.ListItem>I’am coding with a clean and beautiful problem
+                                    solving in mind.
+                                </S.ListItem>
+                                <S.ListItem>Languages: English, Russian</S.ListItem>
+                                <S.ListItem>I live in Brest, Belarus</S.ListItem>
+                            </S.WrapperList>
+                            <Link>Download CV</Link>
+                        </S.ContentWrapper>
+                    </S.Wrapper>
+                </Fade>
             </Container>
         </S.AboutMe>
     );
