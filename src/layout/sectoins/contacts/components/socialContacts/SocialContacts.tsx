@@ -1,21 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Theme} from '../../../../../styles/Theme';
 
 type SocialPropsType = {
     iconId: any
 }
-export const SocialContacts:React.FC<SocialPropsType> = (props: SocialPropsType) => {
+export const SocialContacts: React.FC<SocialPropsType> = (props: SocialPropsType) => {
     return (
-        <li>
-            <Link href="">
+        <List>
+            <a href="">
                 {props.iconId}
-            </Link>
-        </li>
+            </a>
+        </List>
     );
 };
 
-const Link = styled.a`
-&:hover{
-  transform: translateY(-5px);
-}
+const List = styled.a`
+  &:hover {
+    transition: ${Theme.animations.transition};
+    transform: translateY(-5px);
+  }
 `
