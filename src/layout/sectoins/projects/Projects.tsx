@@ -6,6 +6,7 @@ import {Project} from './project/Project';
 import projectPng from './../../../assets/images/project.png'
 import projectWebp from './../../../assets/images/project.webp'
 import {Container} from '../../../component/Container';
+import {AnimatePresence, motion} from 'framer-motion';
 
 export const projectsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
@@ -33,42 +34,48 @@ const projectData = [
         srcSet: projectWebp,
         title: 'Project',
         text: 'Application that can help you in learning by flashcards',
-        type: 'react'
+        type: 'react',
+        id: 1
     },
     {
         src: projectPng,
         srcSet: projectWebp,
         title: 'Project',
         text: 'Application that can help you in learning by flashcards',
-        type: 'react'
+        type: 'react',
+        id: 2
     },
     {
         src: projectPng,
         srcSet: projectWebp,
         title: 'Project',
         text: 'Application that can help you in learning by flashcards',
-        type: 'spa'
+        type: 'spa',
+        id: 3
     },
     {
         src: projectPng,
         srcSet: projectWebp,
         title: 'Project',
         text: 'Application that can help you in learning by flashcards',
-        type: 'landing'
+        type: 'landing',
+        id: 4
     },
     {
         src: projectPng,
         srcSet: projectWebp,
         title: 'Project',
         text: 'Application that can help you in learning by flashcards',
-        type: 'landing'
+        type: 'landing',
+        id: 5
     },
     {
         src: projectPng,
         srcSet: projectWebp,
         title: 'Project',
         text: 'Application that can help you in learning by flashcards',
-        type: 'landing'
+        type: 'landing',
+        id: 6
     },
 
 ]
@@ -87,7 +94,7 @@ export const Projects: React.FC = () => {
         filteredProjects = projectData.filter(project => project.type === 'spa')
     }
 
-    function changeFilterStatus (value: TabsStatusType) {
+    function changeFilterStatus(value: TabsStatusType) {
         setCurrentFilterStatus(value)
     }
 
@@ -95,12 +102,29 @@ export const Projects: React.FC = () => {
         <section id={'projects'}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <TabMenu menuItems={projectsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
+                <TabMenu menuItems={projectsItems} changeFilterStatus={changeFilterStatus}
+                         currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper flexWrap={'wrap'} justifyContent={'space-around'} rowGap={'70px'} columnGap={'20px'}>
-                    {filteredProjects.map((p, index) => {
-                        return <Project key={index} src={p.src} srcSet={p.srcSet} title={p.title}
+
+                    <AnimatePresence>
+                        {filteredProjects.map((p) => {
+                            return (<motion.div layout
+                                                initial={{opacity: 0}}
+                                                animate={{opacity: 1}}
+                                                exit={{opacity: 0}}
+                                                key={p.id}>
+                                    <Project
+                                        key={p.id}
+                                        src={p.src}
+                                        srcSet={p.srcSet}
+                                        title={p.title}
                                         text={p.text}/>
-                    })}
+                                </motion.div>
+                            )
+                        })}
+
+                    </AnimatePresence>
+
                 </FlexWrapper>
             </Container>
         </section>
