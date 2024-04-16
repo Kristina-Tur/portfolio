@@ -60,18 +60,17 @@ const Text = styled.p`
 
 const Link = styled.a<{active?: boolean}>`
   ${font({color: Theme.colors.text.primary, FMax: 18, FMin: 18})};
-  border-bottom: 1px solid ${Theme.colors.text.accent};
   border-radius: 83px;
   padding: 5px 25px;
-
+  
+  transition: ${Theme.animations.transition};
+  
   &:hover {
-    background-image: ${Theme.colors.accent};
-    border-bottom: none;
+    border-bottom: 2px solid ${Theme.colors.text.accent};
   }
 
   ${props => props.active && css<{active?: boolean}>`
-    background-image: ${Theme.colors.accent};
-    border-bottom: none;
+    border-bottom: 2px solid ${Theme.colors.text.accent};
   `}
 `
 

@@ -21,7 +21,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     height: 3px;*/
     width: 18px;
     height: 18px;
-    background-color: #945DD6/*${Theme.colors.text.accent}*/;
+    background-color: ${Theme.colors.text.accent};
     /*border-radius: 4px;*/
     border-radius: 50%;
     opacity: 0.5;

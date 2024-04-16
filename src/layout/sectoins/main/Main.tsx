@@ -1,5 +1,5 @@
 import React from 'react';
-import {LinkCV} from '../../../component/Link';
+import {LinkCV} from '../../../component/LinkCV';
 import {Container} from '../../../component/Container';
 import {Circle} from './components/Circle';
 import {Cross} from './components/Cross';

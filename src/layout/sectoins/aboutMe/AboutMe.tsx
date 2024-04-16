@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionTitle} from '../../../component/titles/SectionTitle';
-import {LinkCV} from '../../../component/Link';
+import {LinkCV} from '../../../component/LinkCV';
 import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
 import {Social} from './components/Social';

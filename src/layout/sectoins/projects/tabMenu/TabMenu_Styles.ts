@@ -33,21 +33,17 @@ const Link = styled.a<{active: boolean}>`
   background-color: ${Theme.colors.primaryBg};
   ${font({color: Theme.colors.text.primary, FMax: 20, FMin: 16, weight: 400, lineHeight: 1.7})};
   text-transform: capitalize;
-  border-bottom: 1px solid ${Theme.colors.text.accent};
   border-radius: 83px;
   padding: 0 25px;
   
   transition: ${Theme.animations.transition};
 
   &:hover {
-    background-image: ${Theme.colors.accent};
-    border-bottom: none;
-    
+    border-bottom: 2px solid ${Theme.colors.text.accent};
   }
   
   ${props => props.active && css<{active: boolean}>`
-    background-image: ${Theme.colors.accent};
-    border-bottom: none;
+    border-bottom: 2px solid ${Theme.colors.text.accent};
   `}
 `
 
