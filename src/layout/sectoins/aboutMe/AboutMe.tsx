@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionTitle} from '../../../component/titles/SectionTitle';
-import {Link} from '../../../component/Link';
+import {LinkCV} from '../../../component/Link';
 import {Theme} from '../../../styles/Theme';
 import {Container} from '../../../component/Container';
 import {Social} from './components/Social';
@@ -39,8 +39,7 @@ export const AboutMe: React.FC = () => {
                         <S.ContentWrapper>
                             <S.WrapperIconList>
                                 {socialData.map((s, index) => {
-                                    return <Social key={index} iconId={s.iconId} width={s.width} height={s.height}
-                                                   viewBox={s.viewBox}/>
+                                    return <Social key={index} iconId={s.iconId} width={s.width} height={s.height} viewBox={s.viewBox}/>
                                 })}
                             </S.WrapperIconList>
                             <S.NameTitle>I’m Kristina Tur</S.NameTitle>
@@ -55,7 +54,7 @@ export const AboutMe: React.FC = () => {
                                 <S.ListItem>Languages: English, Russian</S.ListItem>
                                 <S.ListItem>I live in Brest, Belarus</S.ListItem>
                             </S.WrapperList>
-                            <Link>Download CV</Link>
+                            <LinkCV/>
                         </S.ContentWrapper>
                     </S.Wrapper>
                 </Fade>

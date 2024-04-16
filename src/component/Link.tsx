@@ -3,16 +3,27 @@ import {Theme} from '../styles/Theme';
 import {font} from '../styles/Common';
 
 
-export const Link = styled.a`
+import React from 'react';
+
+export const LinkCV = () => {
+  return (
+      <WrapperLink>
+        <StyledLink href={''}>Download CV</StyledLink>
+      </WrapperLink>
+  );
+};
+
+const WrapperLink = styled.div`
+  transform: scale(1);
+  transition: ${Theme.animations.transition};
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`
+export const StyledLink = styled.a`
   ${font({color: Theme.colors.text.primary, lineHeight: 1.6, FMax: 20, FMin: 18})};
   border-radius: 83px;
   background-image: ${Theme.colors.accent};
   padding: 12px 45px;
-  
-  transition: ${Theme.animations.transition};
-  
-  &:hover {
-    transform: translateY(-5px);
-    
-  }
 `

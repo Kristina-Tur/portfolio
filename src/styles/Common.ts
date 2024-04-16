@@ -14,5 +14,5 @@ export const font = ({weight, color, lineHeight, letter, FMax, FMin}: fontPropsT
     color: ${color || Theme.colors.secondary};
     line-height: ${lineHeight || 1.2};
     letter-spacing: ${letter || undefined};
-    font-size: calc( (100vw - 576px)/(1280 - 576) * (${FMax} - ${FMin}) + ${FMin}px);
+    font-size: calc( (100vw - 576px)/(1440 - 576) * (${FMax} - ${FMin}) + ${FMin}px);
 `

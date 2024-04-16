@@ -1,10 +1,12 @@
 import React from 'react';
-import {Link} from '../../../component/Link';
+import {LinkCV} from '../../../component/Link';
 import {Container} from '../../../component/Container';
 import {Circle} from './components/Circle';
 import {Cross} from './components/Cross';
 import {S} from './Main_styles'
 import Typewriter from 'typewriter-effect'
+import styled from 'styled-components';
+import {Theme} from '../../../styles/Theme';
 
 export const Main: React.FC = () => {
     return (
@@ -30,7 +32,7 @@ export const Main: React.FC = () => {
                                 />
                                 </S.MainTitle>
                             <S.Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </S.Desc>
-                            <Link href={''}>Download CV</Link>
+                            <LinkCV/>
                         </S.Box>
                     </S.WrapperContent>
                     <S.CircleWrapper>
@@ -41,6 +43,8 @@ export const Main: React.FC = () => {
         </S.Main>
     );
 };
+
+
 
 
 

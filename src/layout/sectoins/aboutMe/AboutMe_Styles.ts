@@ -27,7 +27,7 @@ const Wrapper = styled.div`
 const BlurWrapper = styled.div`
   max-width: 560px;
   width: 100%;
-  min-height: 562px;
+  min-height: 560px;
   border-radius: 100px 0;
   border: 2px solid ${Theme.colors.secondary};
   background-image: linear-gradient(147deg, rgba(255, 255, 255, 0.50) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
