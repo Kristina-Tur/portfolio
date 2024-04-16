@@ -133,13 +133,13 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
   bottom: 0;
   background-color: ${Theme.colors.primaryBg};
   opacity: 0.95;
-  display: none;
   
-  ${props => props.isOpen && css<{isOpen: boolean}>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transform: translateX(100%);
+  transition: ${Theme.animations.transition};
 
   ul {
     display: flex;
@@ -148,6 +148,10 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
     align-items: center;
     gap: 60px;
   }
+  
+  ${props => props.isOpen && css<{isOpen: boolean}>`
+    transform: translateX(0);
+  `}
 `
 
 export const S = {
