@@ -1,12 +1,10 @@
 import styled, {css} from 'styled-components';
 import {Theme} from '../../../styles/Theme';
+import {Link} from 'react-scroll';
 
 //Menu
-const Link = styled.a`
-  font-size: 20px;
-  font-weight: 400;
-  
-  color: transparent;
+const MenuList = styled.li`
+  position: relative; 
 `
 
 const Mask = styled.span`
@@ -17,6 +15,7 @@ const Mask = styled.span`
   height: 50%;
   overflow-y: hidden;
   color: ${Theme.colors.text.primary};
+  transition: ${Theme.animations.transition};
   
   & + & {
     top: 50%;
@@ -26,9 +25,12 @@ const Mask = styled.span`
     }
   }
 `
-const MenuList = styled.li`
-  position: relative;
 
+const NavLink = styled(Link)`
+  font-size: 22px;
+  font-weight: 400;
+  color: transparent;
+  
   &::before {
     content: '';
     display: inline-block;
@@ -42,9 +44,10 @@ const MenuList = styled.li`
     z-index: 1;
 
     transform: scale(0);
+    transition: ${Theme.animations.transition};
   }
 
-  &:hover {
+  &:hover, &.active {
     &::before {
       transform: scale(1);
     }
@@ -57,7 +60,7 @@ const MenuList = styled.li`
       }
     }
   }
-`;
+`
 
 //Desktop menu
 const DesktopMenu = styled.nav`
@@ -148,7 +151,7 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
 `
 
 export const S = {
-    Link,
+    NavLink,
     Mask,
     MenuList,
     DesktopMenu,

@@ -36,10 +36,13 @@ const Link = styled.a<{active: boolean}>`
   border-bottom: 1px solid ${Theme.colors.text.accent};
   border-radius: 83px;
   padding: 0 25px;
+  
+  transition: ${Theme.animations.transition};
 
   &:hover {
     background-image: ${Theme.colors.accent};
     border-bottom: none;
+    
   }
   
   ${props => props.active && css<{active: boolean}>`

@@ -12,9 +12,9 @@ type ContactPropsType = {
 export const Contact: React.FC<ContactPropsType> = (props: ContactPropsType) => {
     return (
         <FlexWrapper alignItems={'center'} rowGap={'20px'} columnGap={'20px'}>
-            <a href={''}>
+            <A href={''}>
                 <img src={props.src} alt={'Contacts'}/>
-            </a>
+            </A>
             <div>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
@@ -22,6 +22,12 @@ export const Contact: React.FC<ContactPropsType> = (props: ContactPropsType) => 
         </FlexWrapper>
     );
 };
+
+const A = styled.a`
+&:hover{
+  transform: translateY(-5px);
+}
+`
 
 const Title = styled.h4`
   ${font({color: Theme.colors.text.secondary, FMax: 22, FMin: 18, weight: 500})};

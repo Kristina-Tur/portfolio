@@ -9,8 +9,10 @@ export const Link = styled.a`
   background-image: ${Theme.colors.accent};
   padding: 12px 45px;
   
+  transition: ${Theme.animations.transition};
+  
   &:hover {
     transform: translateY(-5px);
-    transition: .2s;
+    
   }
 `

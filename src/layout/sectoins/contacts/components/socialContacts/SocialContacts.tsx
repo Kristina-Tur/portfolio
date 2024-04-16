@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 type SocialPropsType = {
     iconId: any
@@ -6,9 +7,15 @@ type SocialPropsType = {
 export const SocialContacts:React.FC<SocialPropsType> = (props: SocialPropsType) => {
     return (
         <li>
-            <a href="">
+            <Link href="">
                 {props.iconId}
-            </a>
+            </Link>
         </li>
     );
 };
+
+const Link = styled.a`
+&:hover{
+  transform: translateY(-5px);
+}
+`
