@@ -13,7 +13,8 @@ export const LinkCV = () => {
   );
 };
 
-const WrapperLink = styled.div`
+const WrapperLink = styled.span`
+  display: inline-block;
   transform: scale(1);
   transition: ${Theme.animations.transition};
 

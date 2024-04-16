@@ -25,7 +25,7 @@ const DotsWrapper = styled.div`
   left: 20px;
 
   @media ${Theme.media.mobile}{
-    display: none;
+    /*display: none;*/
   }
 `
 
