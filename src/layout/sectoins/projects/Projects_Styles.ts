@@ -1,6 +1,7 @@
 import {Theme} from '../../../styles/Theme';
 import styled, {css} from 'styled-components';
 import {font} from '../../../styles/Common';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Project = styled.div`
   max-width: 300px;
@@ -38,7 +39,7 @@ const Title = styled.h3`
   }
 `
 
-const Image = styled.img`
+const Image = styled.img/*LazyLoadImage*/`
   width: 100%;
   border-radius: 26px 26px 0 0;
   margin-bottom: 40px;
