@@ -10,6 +10,7 @@ import {DataSocialContacts} from './components/socialContacts/DataSocialContacts
 import {SocialContacts} from './components/socialContacts/SocialContacts';
 import {S} from './Contacts_Styles'
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
 
 
 const DataContacts = [
@@ -31,6 +32,25 @@ const DataContacts = [
 
 ]
 export const Contacts: React.FC = () => {
+    /*const form = useRef<ElementRef<'form'>>(null);
+
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        if(!form.current)return
+
+        emailjs
+            .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+                publicKey: 'YOUR_PUBLIC_KEY',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );*/
     return (
         <StyledContacts id={'contacts'}>
             <Container>

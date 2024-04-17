@@ -2,6 +2,7 @@ import React from 'react';
 import {FlexWrapper} from '../../../../component/FlexWrapper';
 import {S} from '../Projects_Styles'
 import Tilt from 'react-parallax-tilt';
+import project2x from './../../../../assets/images/project@2x.png'
 
 type ProjectPropsTitle = {
     src: string
@@ -17,7 +18,7 @@ export const Project: React.FC<ProjectPropsTitle> = (props: ProjectPropsTitle) =
             <picture>
                 <source srcSet={props.srcSet} type='image/webp' />
                     <source srcSet={props.src} type='image/png' />
-                        <S.Image loading={'lazy'} src={props.src} alt={'Project'} /*loading="lazy"*/ />
+                        <S.Image loading={'lazy'} src={props.src} srcSet={`${project2x} 2x`} alt={'Project'} />
             </picture>
             <S.Title>{props.title}</S.Title>
             </Tilt>

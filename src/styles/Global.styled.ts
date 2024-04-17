@@ -19,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.2;
     font-weight: 600;
+    /*@media screen and (max-width: 375px){
+      width: 100%;
+      max-width: 375px;
+    }*/
   }
 
   a {
