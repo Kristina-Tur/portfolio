@@ -3,11 +3,10 @@ import {SectionTitle} from '../../../component/titles/SectionTitle';
 import {FlexWrapper} from '../../../component/FlexWrapper';
 import {TabMenu, TabsStatusType} from './tabMenu/TabMenu';
 import {Project} from './project/Project';
-import projectPng from './../../../assets/images/project.png'
-import projectWebp from './../../../assets/images/project.webp'
 import {Container} from '../../../component/Container';
 import {AnimatePresence, motion} from 'framer-motion';
 import styled from 'styled-components';
+import {projectsData} from './projectsData/projectsData';
 
 export const projectsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
@@ -29,73 +28,22 @@ export const projectsItems: Array<{ status: TabsStatusType, title: string }> = [
 
 ]
 
-const projectData = [
-    {
-        src: projectPng,
-        srcSet: projectWebp,
-        title: 'Project',
-        text: 'Application that can help you in learning by flashcards',
-        type: 'react',
-        id: 1
-    },
-    {
-        src: projectPng,
-        srcSet: projectWebp,
-        title: 'Project',
-        text: 'Application that can help you in learning by flashcards',
-        type: 'react',
-        id: 2
-    },
-    {
-        src: projectPng,
-        srcSet: projectWebp,
-        title: 'Project',
-        text: 'Application that can help you in learning by flashcards',
-        type: 'spa',
-        id: 3
-    },
-    {
-        src: projectPng,
-        srcSet: projectWebp,
-        title: 'Project',
-        text: 'Application that can help you in learning by flashcards',
-        type: 'landing',
-        id: 4
-    },
-    {
-        src: projectPng,
-        srcSet: projectWebp,
-        title: 'Project',
-        text: 'Application that can help you in learning by flashcards',
-        type: 'landing',
-        id: 5
-    },
-    {
-        src: projectPng,
-        srcSet: projectWebp,
-        title: 'Project',
-        text: 'Application that can help you in learning by flashcards',
-        type: 'landing',
-        id: 6
-    },
-
-]
 export const Projects: React.FC = () => {
 
     const [currentFilterStatus, setCurrentFilterStatus] = useState('all');
-    let filteredProjects = projectData;
+    let filteredProjects = projectsData;
 
     if (currentFilterStatus === 'landing') {
-        filteredProjects = projectData.filter(project => project.type === 'landing')
+        filteredProjects = projectsData.filter(project => project.type === 'landing')
     }
     if (currentFilterStatus === 'react') {
-        filteredProjects = projectData.filter(project => project.type === 'react')
+        filteredProjects = projectsData.filter(project => project.type === 'react')
     }
     if (currentFilterStatus === 'spa') {
-        filteredProjects = projectData.filter(project => project.type === 'spa')
+        filteredProjects = projectsData.filter(project => project.type === 'spa')
     }
 
-    function changeFilterStatus(value: TabsStatusType) {
+    const changeFilterStatus = (value: TabsStatusType) => {
         setCurrentFilterStatus(value)
     }
 
