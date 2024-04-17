@@ -5,9 +5,6 @@ import {DesktopMenu} from './headerMenu/desktopMenu/DesktopMenu';
 import {MobileMenu} from './headerMenu/mobileMenu/MobileMenu';
 import {S} from './Header_Styles'
 
-// rsc
-/*const headerItems = [, 'Projects', 'About', 'Contacts']*/
-
 const headerItems = [
     {
         title: 'Home',

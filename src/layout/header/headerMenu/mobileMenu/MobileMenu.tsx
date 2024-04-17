@@ -3,7 +3,11 @@ import {Menu} from '../menu/Menu';
 import {S} from '../HeaderMenu_styles'
 import {TabsStatusType} from '../../../sectoins/projects/tabMenu/TabMenu';
 
-export const MobileMenu: React.FC<{ menuItems: Array<{title: string, href: string}> }> = (props: { menuItems: Array<{title: string, href: string}> }) => {
+export type MobileMenuPropsType = {
+    menuItems: Array<{title: string, href: string}>
+}
+
+export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuPropsType) => {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {

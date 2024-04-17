@@ -1,9 +1,8 @@
 import React from 'react';
 import {S} from '../HeaderMenu_styles'
+import {MobileMenuPropsType} from '../mobileMenu/MobileMenu';
 
-export const Menu: React.FC<{ menuItems: Array<{ title: string, href: string }> }> = (props: {
-    menuItems: Array<{ title: string, href: string }>
-}) => {
+export const Menu: React.FC<MobileMenuPropsType> = (props: MobileMenuPropsType) => {
     return (
         <ul role={'menu'}>
             {props.menuItems.map((item, index) => {

@@ -17,7 +17,7 @@ export const Project: React.FC<ProjectPropsTitle> = (props: ProjectPropsTitle) =
             <picture>
                 <source srcSet={props.srcSet} type='image/webp' />
                     <source srcSet={props.src} type='image/png' />
-                        <S.Image src={props.src} alt={'Project'} /*loading="lazy"*/ />
+                        <S.Image loading={'lazy'} src={props.src} alt={'Project'} /*loading="lazy"*/ />
             </picture>
             <S.Title>{props.title}</S.Title>
             </Tilt>
