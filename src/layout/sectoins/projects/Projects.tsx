@@ -134,5 +134,6 @@ export const Projects: React.FC = () => {
 
 const StyledProjects = styled.section`
   position: relative; //for animation of Particles
+  overflow: hidden; //for Dots
 `
 

@@ -31,7 +31,7 @@ export const Main: React.FC = () => {
                                     }}
                                 />
                                 </S.MainTitle>
-                            <S.Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis reprehenderit velit. Animi consequatur debitis eius esse </S.Desc>
+                            <S.Desc>Being Front End is amazing. We don not just create beautiful interfaces, we also create experiences that make people's lives easier.</S.Desc>
                             <LinkCV/>
                         </S.Box>
                     </S.WrapperContent>

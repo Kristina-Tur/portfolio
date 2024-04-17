@@ -45,6 +45,9 @@ export const AboutMe: React.FC = () => {
                             <S.NameTitle>I’m Kristina Tur</S.NameTitle>
                             <S.WrapperList>
                                 <S.ListItem>28 years old</S.ListItem>
+                                {/*I like to implement designs that inspire and attract people. Use best practices to optimize the user experience. Every day I enjoy and love challenges, overcoming them motivates me to keep learning and makes me a better professional.
+
+                                Besides programming, I also like doing Freestyle Soccer ⚽ as a hobby.*/}
                                 <S.ListItem>Higher technological education in the field of garment
                                     production</S.ListItem>
                                 <S.ListItem>Started to get interested in programming in 2023</S.ListItem>

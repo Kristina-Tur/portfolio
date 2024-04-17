@@ -71,6 +71,7 @@ export const Skills:React.FC = () => {
     // @ts-ignore
     return (
         <section>
+            {/*можно сделать скролл*/}
             <Container>
                 <FlexWrapper justifyContent={'space-evenly'} flexWrap={'wrap'} rowGap={'80px'} columnGap={'20px'}>
                     {skillData.map((s, index)=>{
