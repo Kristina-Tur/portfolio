@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import {CSSProperties} from 'react';
 
 type FlexWrapperPropsType = {
-    flexDirection?: string
+    flexDirection?: CSSProperties['flexDirection'] //вместо string, тогда свойства будут подсказываться
+    /*flexDirection?: string*/
     justifyContent?: string
     alignItems?: string
     flexWrap?: string
