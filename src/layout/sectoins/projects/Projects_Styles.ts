@@ -1,6 +1,7 @@
 import {Theme} from '../../../styles/Theme';
 import styled, {css} from 'styled-components';
 import {font} from '../../../styles/Common';
+import s from '../../../assets/images/Screenshot 2024-08-08 171143.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Project = styled.div`
@@ -15,6 +16,8 @@ const Project = styled.div`
   box-shadow: 0 8px 32px 0 ${Theme.colors.border.projectBoxShadow};
 
   position: relative;
+    
+    background-image: ${s};
 
   @media ${Theme.media.mobile}{
     max-width: 200px;
