@@ -8,7 +8,8 @@ import React from 'react';
 export const LinkCV = () => {
   return (
       <WrapperLink>
-        <StyledLink href={''}>Download CV</StyledLink>
+        <StyledLink href={'https://drive.google.com/file/d/1uit_uKjTLK6HhreIwIwfrB8b02LghxdY/view?usp=drive_link'} target={"_blank"}
+                    rel={"noreferrer"}>Download CV</StyledLink>
       </WrapperLink>
   );
 };
